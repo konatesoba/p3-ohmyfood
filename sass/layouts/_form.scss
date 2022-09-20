@@ -1,0 +1,29 @@
+
+
+.form {
+        background-color: $color-arriere-form;
+        &__localisation {
+            background-color: $color-champ;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%) inset;
+            &--champ {
+                border: none;
+                text-align: center;
+                background-color: $color-champ;
+                }
+        }
+        &__recherche {
+    
+            text-align: center;
+            padding: 30px 30px 50px 30px;
+        }
+    @include version-desktop {
+        background-color: transparent;
+        
+    }
+}
+
+              
+

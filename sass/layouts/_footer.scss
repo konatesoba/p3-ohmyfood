@@ -1,0 +1,35 @@
+.footer-bloc {
+    width: auto;
+    background-color: hsl(0,0%,25%);
+    padding: 20px 0;
+    &__img {
+        width: 35%;
+        margin: 20px;
+        @include version-desktop {
+            width: 10%;
+        }
+        @include version-tablette {
+            width: 15%;
+        }
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        margin: -25px 20px;
+        color: white;
+        text-decoration: none;
+        & h4 {
+            padding: 0 10px;
+        }
+    }
+
+    &__contact {
+        text-decoration: none;
+        color: white;
+        & p {
+            padding: 0 20px;
+        }
+    } 
+    
+    
+}

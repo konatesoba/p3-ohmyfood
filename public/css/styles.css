@@ -1,0 +1,248 @@
+.form__recherche--bouton {
+  border-radius: 30px;
+  padding: 15px;
+  border: none;
+  color: white;
+  margin: 15px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 400ms;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
+}
+@media screen and (min-width: 992px) {
+  .form__recherche--bouton:hover {
+    transform: scale(1.15);
+    box-shadow: 0 30px 12px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+.resto-carte button {
+  border: none;
+  background-color: white;
+}
+.resto-carte__button {
+  position: absolute;
+  top: 175px;
+  right: 10px;
+}
+.resto-carte__icone:hover {
+  transform: scalex(1);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
+}
+
+.header-logo {
+  width: 100%;
+  box-shadow: "0 5px 10px 0" #fff;
+  padding: 18px;
+}
+.header-logo__link {
+  display: flex;
+  justify-content: center;
+}
+.header-logo__img {
+  width: 50%;
+}
+@media screen and (min-width: 768px) {
+  .header-logo {
+    width: auto;
+    border: 1px solid red;
+  }
+  .header-logo__img {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header-logo {
+    width: auto;
+    border: 1px solid;
+  }
+  .header-logo__link {
+    display: flex;
+    justify-content: center;
+  }
+  .header-logo__img {
+    width: 20%;
+  }
+}
+
+.nav {
+  width: 85%;
+  margin: 0 30px;
+}
+.nav-fonctionnement {
+  width: 85%;
+  margin: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.nav-fonctionnement__etape {
+  border-radius: 20px;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.11);
+  background-color: #F3F3F3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: initial;
+  overflow: hidden;
+}
+.nav-fonctionnement__backcolor {
+  background-color: rgba(238, 130, 238, 0.1725490196);
+}
+.nav-fonctionnement__cercle {
+  position: absolute;
+  left: -10px;
+  color: #9356DC;
+  font-size: 17px;
+}
+@media screen and (min-width: 992px) {
+  .nav-fonctionnement__cercle {
+    position: initial;
+  }
+}
+.nav-fonctionnement__icone {
+  position: absolute;
+  left: 25px;
+  color: gray;
+  font-size: 17px;
+}
+@media screen and (min-width: 992px) {
+  .nav-fonctionnement__icone {
+    position: initial;
+    padding: 10px;
+  }
+}
+.nav-fonctionnement__color {
+  color: #9356DC;
+}
+@media screen and (min-width: 992px) {
+  .nav-fonctionnement {
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+  .nav-fonctionnement__etape {
+    width: 20%;
+  }
+}
+
+.resto {
+  width: 100%;
+  background-color: #F3F3F3;
+}
+.resto-affiche {
+  display: flex;
+  flex-direction: column;
+}
+.resto-carte {
+  border-radius: 15px 15px 15px 15px;
+  background: white;
+  width: 90%;
+  margin: 20px 15px;
+  position: relative;
+}
+.resto-carte--img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  height: 160px;
+  object-fit: cover;
+}
+.resto-carte__footer {
+  height: 50px;
+  position: initial;
+  overflow: hidden;
+}
+.resto-carte__description h4 {
+  margin: 10px 10px;
+}
+.resto-carte__description p {
+  margin: -5px 10px;
+}
+@media screen and (min-width: 992px) {
+  .resto-main {
+    display: flex;
+  }
+}
+
+.form {
+  background-color: #F5F5F5;
+}
+.form__localisation {
+  background-color: #DCDCDC;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2) inset;
+}
+.form__localisation--champ {
+  border: none;
+  text-align: center;
+  background-color: #DCDCDC;
+}
+.form__recherche {
+  text-align: center;
+  padding: 30px 30px 50px 30px;
+}
+@media screen and (min-width: 992px) {
+  .form {
+    background-color: transparent;
+  }
+}
+
+.footer-bloc {
+  width: auto;
+  background-color: hsl(0deg, 0%, 25%);
+  padding: 20px 0;
+}
+.footer-bloc__img {
+  width: 35%;
+  margin: 20px;
+}
+@media screen and (min-width: 992px) {
+  .footer-bloc__img {
+    width: 10%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-bloc__img {
+    width: 15%;
+  }
+}
+.footer-bloc__info {
+  display: flex;
+  align-items: center;
+  margin: -25px 20px;
+  color: white;
+  text-decoration: none;
+}
+.footer-bloc__info h4 {
+  padding: 0 10px;
+}
+.footer-bloc__contact {
+  text-decoration: none;
+  color: white;
+}
+.footer-bloc__contact p {
+  padding: 0 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  width: auto;
+  font-family: "font-family:'Roboto', sans-serif";
+  margin: auto;
+  font-family: "font-family:'Roboto', sans-serif";
+}
+
+h1 {
+  font-family: "font-family:'Shrikhand', cursive";
+  font-size: 25px;
+}
+
+/*# sourceMappingURL=styles.css.map */

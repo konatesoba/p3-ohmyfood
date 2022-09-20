@@ -1,0 +1,32 @@
+
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/maps";
+@import "./utils/mixins";
+@import "./utils/extensions";
+@import "./base/base";
+@import "./components/buttons";
+@import "./layouts/header";
+@import "./layouts/nav";
+@import "./layouts/container";
+@import "./layouts/form";
+@import "./layouts/footer";
+@import "./pages/about";
+
+
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+body {
+    width: auto; 
+    font-family: $page-police;
+    margin: auto;
+    font-family:$page-police;
+ }
+ h1 {
+    font-family:$titre1-police;
+    font-size: $titre1-taille;
+ }

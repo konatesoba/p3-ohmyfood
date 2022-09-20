@@ -1,0 +1,67 @@
+.nav {
+        width: 85%;
+        margin: 0 30px;
+        &-fonctionnement{
+            width: 85%;
+            margin: 10px 30px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            &__etape{
+                border-radius: 20px;
+                box-shadow: 0 6px 12px 0 rgb(0 0 0 / 11%);
+                background-color: $color-arriere;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                position: initial;
+                overflow: hidden;
+            }
+            &__backcolor {
+
+                background-color: #EE82EE2C;
+            }
+            &__cercle {
+                position: absolute;
+                left: -10px;
+                color: $color-primaire;
+                font-size: $size-icone;
+
+                @include version-desktop{
+                    position: initial;
+                }
+            
+                }
+            &__icone {
+                    position: absolute;
+                    left: 25px;
+                    color: $color-icone;
+                    font-size: $size-icone;
+                    @include version-desktop {
+                        position: initial;
+                        padding: 10px;
+
+                    }
+                }
+            &__color {
+
+                color: $color-primaire;
+            }
+
+        }
+        
+        @include version-desktop {
+            &-fonctionnement {
+                width: auto;
+                display: flex;
+                align-items: center;
+                &__etape {
+                    width: 20%;
+                }
+            }
+        }
+        
+    }
+
+

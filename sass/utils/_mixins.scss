@@ -1,0 +1,11 @@
+@mixin version-tablette {
+    @media screen and (min-width:$breakpoints-tablette) {
+        @content;
+    }
+}
+
+@mixin version-desktop {
+    @media screen and (min-width:$breakpoints-descktop) {
+        @content;
+    }
+}

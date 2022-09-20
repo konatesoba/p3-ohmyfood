@@ -1,0 +1,42 @@
+.resto {
+        width: 100%;
+        background-color: $color-arriere;
+        &-affiche {
+            display: flex;
+            flex-direction: column;
+        }
+        &-carte {
+            border-radius: 15px 15px 15px 15px;
+            background: white;
+            width: 90%;
+            margin: 20px 15px;
+            position:relative;
+            &--img {
+                width: 100%;
+                border-radius: 15px 15px 0 0 ;
+                height: 160px;
+                object-fit: cover;
+            }
+            &__footer{
+                height: 50px;
+                position: initial;
+                overflow: hidden;
+            }
+            &__description {
+
+                & h4{
+                    margin: 10px 10px;
+                }
+                & p{
+                    margin:-5px 10px;
+                }
+            }
+        }
+    @include version-desktop {
+        &-main{
+            display: flex;
+        }
+        
+    }
+
+    }
