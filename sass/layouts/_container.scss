@@ -1,42 +1,96 @@
-.resto {
-        width: 100%;
+main {
         background-color: $color-arriere;
-        &-affiche {
+        & .resto {
+            width: auto;
             display: flex;
-            flex-direction: column;
-        }
-        &-carte {
-            border-radius: 15px 15px 15px 15px;
-            background: white;
-            width: 90%;
-            margin: 20px 15px;
-            position:relative;
-            &--img {
-                width: 100%;
-                border-radius: 15px 15px 0 0 ;
-                height: 160px;
-                object-fit: cover;
-            }
-            &__footer{
-                height: 50px;
-                position: initial;
-                overflow: hidden;
-            }
-            &__description {
+            flex-wrap: wrap;
+        
+            &-carte {
+                border-radius: 15px 15px 15px 15px;
+                background: white;
+                width: 90%;
+                margin: 20px 15px;
+                position:relative;
+                &__nouveau {
+                    & p {
+                        background-color: $color-tertiaire;
+                        width: 70px;
+                        padding: 5px;
+                        position: absolute;
+                        right: 10px;
+                    }
 
-                & h4{
-                    margin: 10px 10px;
                 }
-                & p{
-                    margin:-5px 10px;
+                
+                @include version-tablette {
+                    width: 45%;
+                }
+                @include version-desktop {
+                    width: 22%;
+                }
+                &--img {
+                    width: 100%;
+                    border-radius: 15px 15px 0 0 ;
+                    height: 160px;
+                    object-fit: cover;
+                }
+                &__footer{
+                    height: 50px;
+                    position: initial;
+                    overflow: hidden;
+                }
+                &__description {
+                    color: black;
+
+                    & h4{
+                        margin: 10px 10px;
+                    }
+                    & p{
+                        margin:-5px 10px;
+                    }
                 }
             }
-        }
-    @include version-desktop {
-        &-main{
-            display: flex;
         }
         
-    }
+        
+        }
+        .carte1{
+            width: auto;
+            &-img {
+                width: 100%;
+                object-fit: cover;
+            }
+            &-background {
+                background-color: $color-arriere-form;
+                border-top-left-radius: 35px;
+                border-top-right-radius: 35px;
+                padding: 15px;
+                position: relative;
+                top: -30px;
+            }
+            &-presentation {
+                width: auto;
+                display: flex;
+                flex-wrap: wrap;
+                
+                &__menu{
+                    width: 100%;
+                    border-radius: 15px;
+                    box-shadow: 0 6px 12px 0 rgb(0 0 0 / 11%);
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                }
+                & h4 {
+                    margin: 10px 10px;
+                    font-size: 20px;
+                }
+                & p {
+                    margin: -5px 10px;
+                    font-size: 17px;
+                }
+            }
+        }
 
-    }
+    

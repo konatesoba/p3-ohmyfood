@@ -7,7 +7,7 @@
         cursor: pointer;
         transform: scale(1);
         transition: transform 400ms;
-        background-image: linear-gradient(0deg,rgba(147,86,220,.9), rgba(225,121,218,.9));
+        background-image: linear-gradient(0deg, $color-primaire, $color-second);
         @include version-desktop {
             &:hover {
                 transform: scale(1.15);
@@ -16,6 +16,7 @@
         }
     }
 
+    
     .resto-carte {
         & button {
             border: none;
@@ -30,7 +31,14 @@
         &__icone {
             &:hover {
                 transform: scalex(1);
-                background-image: linear-gradient(0deg,rgba(147,86,220,.9), rgba(225,121,218,.9));
+                background-image: linear-gradient(0deg,$color-primaire, $color-second);
+                cursor: pointer;
             }
         }
+    }
+    .header-logo__button {
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        left: 10px;
     }
