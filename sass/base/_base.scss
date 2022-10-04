@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+body {
+    width: auto; 
+    font-family: $page-police;
+    margin: auto;
+    font-family:$page-police;
+ }
+ h1 {
+    font-family:$titre1-police;
+    font-size: $titre1-taille;
+ }

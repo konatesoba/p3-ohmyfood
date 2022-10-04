@@ -49,6 +49,29 @@ main {
                         margin:-5px 10px;
                     }
                 }
+                .resto-carte {
+                    &__heart {
+                        color: gray;
+                        
+
+                        
+                    }
+                    &__icone {
+                        transition: all 500ms ease-in-out;
+                        position: absolute;
+                        top:175px;
+                        right: 10px;
+                        &:hover {
+                            color: transparent;
+                            -webkit-background-clip: text;
+                            color: transparent;
+                            background-image: linear-gradient(0deg,$color-primaire, $color-second);
+                            
+                            
+                            
+                        }
+                    }
+                }
             }
         }
         
@@ -67,12 +90,52 @@ main {
                 padding: 15px;
                 position: relative;
                 top: -30px;
+                /*& p {
+                    border-bottom: 2px solid $color-tertiaire;
+                    width: 40px;
+                    padding-bottom: 5px;
+                }*/
+            }
+            
+            &-header {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+                &__icone {
+                    font-size: 25px;
+                }
+                
             }
             &-presentation {
                 width: auto;
                 display: flex;
-                flex-wrap: wrap;
+                flex-direction: column;
+                margin: auto;
+                opacity: 0;
+                transition: ease-in 2s;
+                transform: 2s;
                 
+                &:nth-child(3) {
+                    
+                    animation: slidedown 1s 0.5s forwards;
+                }
+                &:nth-child(5){
+
+                    animation: slidedown 1s 1s forwards;
+                }
+                &:nth-child(7){
+
+                    animation: slidedown 1s 1.5s forwards;
+                }
+                
+                
+                @include version-desktop {
+                    flex-direction: initial;
+
+                }
+                @include version-tablette {
+                    margin-right: 120px;
+                }
                 &__menu{
                     width: 100%;
                     border-radius: 15px;
@@ -81,16 +144,87 @@ main {
                     display: flex;
                     flex-direction: column;
                     margin-bottom: 20px;
-                }
-                & h4 {
-                    margin: 10px 10px;
-                    font-size: 20px;
-                }
-                & p {
-                    margin: -5px 10px;
-                    font-size: 17px;
-                }
-            }
-        }
+                    transition: width ease-in-out 500ms;
+                    /*&:hover {
+                        width:92% ;
+                        border-radius: 15px 0 0 15px;
+                    }*/
+                     
+                    &__space {
+                        display: flex;
+                        justify-content: space-between;
+                        padding-bottom: 15px;
 
-    
+                        & p {
+                            margin: -5px 10px;
+                            //font-size: 17px;
+                        }
+                    }
+                    & h4 {
+                        margin: 10px;
+                        //font-size: 20px;
+                    }
+                }
+                    @include version-desktop {
+                        margin: 10px 20px;
+                        /*transition: margin 1s ease-in-out;
+                        &:hover {
+                            margin: 50px 0;
+                        }*/
+                    }
+                
+                &__animation {
+                    
+                    
+                    &__check {
+
+                            width: 20%;
+                            background-color: $color-tertiaire;
+                            color: white;
+                            text-align: center;
+                            padding: 22px;
+                            position: absolute;
+                            bottom: 20px;
+                            right: -0px;
+                            border-radius: 0 15px 15px 0;
+                            @include version-tablette {
+                                width: auto;
+                                right: -62px;
+                                //display: none;
+                            }
+
+                                /*&__rotate {
+                                    transition: transform 1s;
+                                    transform: rotate(360deg);
+                                }*/
+
+                    }
+                        
+                } 
+                   &__survol {
+                        & p:nth-child(1) {
+                            white-space: nowrap;//empeche le retour à la ligne 
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            
+                        }  
+                        
+                    }
+                        
+
+                
+                }
+            } 
+             
+        
+    .carte1-presentation__animation__check{
+        transition: right 500ms ease-in-out;
+        display: none;
+    }   
+    @include version-tablette {
+    .carte1-presentation__menu:hover .carte1-presentation__animation__check {
+        right: 0px;
+        display: initial;
+        
+    }
+    }

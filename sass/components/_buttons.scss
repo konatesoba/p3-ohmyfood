@@ -16,26 +16,6 @@
         }
     }
 
-    
-    .resto-carte {
-        & button {
-            border: none;
-            background-color: white;
-        }
-        &__button {
-            position: absolute;
-            top:175px;
-            right: 10px;
-            
-        }
-        &__icone {
-            &:hover {
-                transform: scalex(1);
-                background-image: linear-gradient(0deg,$color-primaire, $color-second);
-                cursor: pointer;
-            }
-        }
-    }
     .header-logo__button {
         border: none;
         background-color: transparent;

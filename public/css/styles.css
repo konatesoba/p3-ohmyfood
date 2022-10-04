@@ -1,3 +1,31 @@
+@keyframes slidedown {
+  from {
+    opacity: 0;
+    transform: translatey(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  width: auto;
+  font-family: "font-family:'Roboto', sans-serif";
+  margin: auto;
+  font-family: "font-family:'Roboto', sans-serif";
+}
+
+h1 {
+  font-family: "font-family:'Shrikhand', cursive";
+  font-size: 25px;
+}
+
 .form__recherche--bouton {
   border-radius: 30px;
   padding: 15px;
@@ -14,21 +42,6 @@
     transform: scale(1.15);
     box-shadow: 0 30px 12px 0 rgba(0, 0, 0, 0.25);
   }
-}
-
-.resto-carte button {
-  border: none;
-  background-color: white;
-}
-.resto-carte__button {
-  position: absolute;
-  top: 175px;
-  right: 10px;
-}
-.resto-carte__icone:hover {
-  transform: scalex(1);
-  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
-  cursor: pointer;
 }
 
 .header-logo__button {
@@ -189,6 +202,21 @@ main .resto-carte__description h4 {
 main .resto-carte__description p {
   margin: -5px 10px;
 }
+main .resto-carte .resto-carte__heart {
+  color: gray;
+}
+main .resto-carte .resto-carte__icone {
+  transition: all 500ms ease-in-out;
+  position: absolute;
+  top: 175px;
+  right: 10px;
+}
+main .resto-carte .resto-carte__icone:hover {
+  color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+}
 
 .carte1 {
   width: auto;
@@ -204,11 +232,47 @@ main .resto-carte__description p {
   padding: 15px;
   position: relative;
   top: -30px;
+  /*& p {
+      border-bottom: 2px solid $color-tertiaire;
+      width: 40px;
+      padding-bottom: 5px;
+  }*/
+}
+.carte1-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.carte1-header__icone {
+  font-size: 25px;
 }
 .carte1-presentation {
   width: auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto;
+  opacity: 0;
+  transition: ease-in 2s;
+  transform: 2s;
+}
+.carte1-presentation:nth-child(3) {
+  animation: slidedown 1s 0.5s forwards;
+}
+.carte1-presentation:nth-child(5) {
+  animation: slidedown 1s 1s forwards;
+}
+.carte1-presentation:nth-child(7) {
+  animation: slidedown 1s 1.5s forwards;
+}
+@media screen and (min-width: 992px) {
+  .carte1-presentation {
+    flex-direction: initial;
+  }
+}
+@media screen and (min-width: 768px) {
+  .carte1-presentation {
+    margin-right: 120px;
+  }
 }
 .carte1-presentation__menu {
   width: 100%;
@@ -218,16 +282,70 @@ main .resto-carte__description p {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  transition: width ease-in-out 500ms;
+  /*&:hover {
+      width:92% ;
+      border-radius: 15px 0 0 15px;
+  }*/
 }
-.carte1-presentation h4 {
-  margin: 10px 10px;
-  font-size: 20px;
+.carte1-presentation__menu__space {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
 }
-.carte1-presentation p {
+.carte1-presentation__menu__space p {
   margin: -5px 10px;
-  font-size: 17px;
+}
+.carte1-presentation__menu h4 {
+  margin: 10px;
+}
+@media screen and (min-width: 992px) {
+  .carte1-presentation {
+    margin: 10px 20px;
+    /*transition: margin 1s ease-in-out;
+    &:hover {
+        margin: 50px 0;
+    }*/
+  }
+}
+.carte1-presentation__animation__check {
+  width: 20%;
+  background-color: #99E2D0;
+  color: white;
+  text-align: center;
+  padding: 22px;
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  border-radius: 0 15px 15px 0;
+  /*&__rotate {
+      transition: transform 1s;
+      transform: rotate(360deg);
+  }*/
+}
+@media screen and (min-width: 768px) {
+  .carte1-presentation__animation__check {
+    width: auto;
+    right: -62px;
+  }
+}
+.carte1-presentation__survol p:nth-child(1) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+.carte1-presentation__animation__check {
+  transition: right 500ms ease-in-out;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .carte1-presentation__menu:hover .carte1-presentation__animation__check {
+    right: 0px;
+    display: initial;
+  }
+}
 .form {
   background-color: #F5F5F5;
 }
@@ -288,24 +406,6 @@ main .resto-carte__description p {
 }
 .footer-bloc__contact p {
   padding: 0 20px;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  width: auto;
-  font-family: "font-family:'Roboto', sans-serif";
-  margin: auto;
-  font-family: "font-family:'Roboto', sans-serif";
-}
-
-h1 {
-  font-family: "font-family:'Shrikhand', cursive";
-  font-size: 25px;
 }
 
 /*# sourceMappingURL=styles.css.map */
