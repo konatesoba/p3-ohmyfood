@@ -145,10 +145,10 @@ main {
                     flex-direction: column;
                     margin-bottom: 20px;
                     transition: width ease-in-out 500ms;
-                    /*&:hover {
+                    &:hover {
                         width:92% ;
                         border-radius: 15px 0 0 15px;
-                    }*/
+                    }
                      
                     &__space {
                         display: flex;
@@ -193,10 +193,10 @@ main {
                                 //display: none;
                             }
 
-                                /*&__rotate {
+                                __rotate {
                                     transition: transform 1s;
                                     transform: rotate(360deg);
-                                }*/
+                                }
 
                     }
                         
