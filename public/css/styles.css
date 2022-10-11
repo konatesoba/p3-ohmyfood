@@ -8,6 +8,34 @@
     transform: translateY(0);
   }
 }
+@keyframes survol {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes load {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+    display: none;
+  }
+}
+@keyframes afterload {
+  0% {
+    opacity: 0.3;
+  }
+  99% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 *,
 *::before,
 *::after {
@@ -16,14 +44,43 @@
 
 body {
   width: auto;
-  font-family: "font-family:'Roboto', sans-serif";
   margin: auto;
-  font-family: "font-family:'Roboto', sans-serif";
+  cursor: pointer;
+  z-index: 0;
+}
+body #global {
+  animation: afterload 5s;
+  z-index: 1;
+  height: 100%;
+}
+body #loader {
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid white;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-right: 16px solid #FF79DA;
+  border-left: 16px solid #FF79DA;
+  border-bottom: 16px solid #9356DC;
+  animation: load linear infinite 1s;
 }
 
-h1 {
-  font-family: "font-family:'Shrikhand', cursive";
-  font-size: 25px;
+.carte1 h1 {
+  font-family: "Shrikhand";
+}
+
+h4 {
+  font-family: "Roboto";
+}
+
+P {
+  font-family: "Roboto";
+  font-size: 14px;
 }
 
 .form__recherche--bouton {
@@ -37,18 +94,31 @@ h1 {
   transition: transform 400ms;
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
 }
-@media screen and (min-width: 992px) {
-  .form__recherche--bouton:hover {
-    transform: scale(1.15);
-    box-shadow: 0 30px 12px 0 rgba(0, 0, 0, 0.25);
-  }
+.form__recherche--bouton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 30px 12px 0 rgba(0, 0, 0, 0.25);
+  opacity: 0.8;
 }
 
-.header-logo__button {
+.carte1-button {
+  text-align: center;
+}
+.carte1-button button {
+  width: 190px;
+  border-radius: 30px;
+  padding: 15px;
   border: none;
-  background-color: transparent;
-  position: absolute;
-  left: 10px;
+  color: white;
+  margin: 35px 55px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 400ms;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+}
+.carte1-button button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 30px 12px 0 rgba(0, 0, 0, 0.25);
+  opacity: 0.8;
 }
 
 .header-logo {
@@ -86,6 +156,18 @@ h1 {
     width: 20%;
   }
 }
+.header-logo__return {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  left: 10px;
+  color: black;
+  opacity: 80%;
+}
+
+a {
+  text-decoration: none;
+}
 
 .fonctionnement {
   width: auto;
@@ -95,10 +177,8 @@ h1 {
   flex-direction: column;
   position: relative;
 }
-@media screen and (min-width: 992px) {
-  .fonctionnement-fonctionnement {
-    width: auto;
-  }
+.fonctionnement h1 {
+  font-family: "Roboto";
 }
 .fonctionnement__etape {
   border-radius: 20px;
@@ -110,6 +190,9 @@ h1 {
   margin-bottom: 20px;
   position: initial;
   overflow: hidden;
+}
+.fonctionnement__etape:hover {
+  background-color: rgba(238, 130, 238, 0.1725490196);
 }
 .fonctionnement__cercle {
   position: absolute;
@@ -126,47 +209,44 @@ h1 {
   bottom: -11px;
   right: 7px;
 }
-@media screen and (min-width: 992px) {
-  .fonctionnement__cercle {
-    position: initial;
-  }
-}
 .fonctionnement__icone {
   position: absolute;
   left: 25px;
   color: gray;
   font-size: 13px;
 }
-@media screen and (min-width: 992px) {
-  .fonctionnement__icone {
-    position: initial;
-    padding: 10px;
-  }
-}
-.fonctionnement__color {
+
+.fonctionnement__etape:hover .fonctionnement__icone {
   color: #9356DC;
-}
-.fonctionnement__backcolor {
-  background-color: rgba(238, 130, 238, 0.1725490196);
 }
 
 main {
   background-color: #F3F3F3;
 }
+main h1 {
+  position: relative;
+  top: 35px;
+  margin: 0 20px;
+  font-family: "Roboto";
+  font-size: 25px;
+}
 main .resto {
   width: auto;
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
+  padding: 40px 0;
 }
 main .resto-carte {
   border-radius: 15px 15px 15px 15px;
   background: white;
   width: 90%;
-  margin: 20px 15px;
+  margin: 10px auto;
   position: relative;
 }
 main .resto-carte__nouveau p {
   background-color: #99E2D0;
+  color: #1b6150;
   width: 70px;
   padding: 5px;
   position: absolute;
@@ -175,11 +255,8 @@ main .resto-carte__nouveau p {
 @media screen and (min-width: 768px) {
   main .resto-carte {
     width: 45%;
-  }
-}
-@media screen and (min-width: 992px) {
-  main .resto-carte {
-    width: 22%;
+    margin: auto;
+    margin-bottom: 25px;
   }
 }
 main .resto-carte--img {
@@ -189,9 +266,8 @@ main .resto-carte--img {
   object-fit: cover;
 }
 main .resto-carte__footer {
-  height: 50px;
+  padding-bottom: 20px;
   position: initial;
-  overflow: hidden;
 }
 main .resto-carte__description {
   color: black;
@@ -202,24 +278,30 @@ main .resto-carte__description h4 {
 main .resto-carte__description p {
   margin: -5px 10px;
 }
-main .resto-carte .resto-carte__heart {
-  color: gray;
-}
 main .resto-carte .resto-carte__icone {
-  transition: all 500ms ease-in-out;
   position: absolute;
   top: 175px;
   right: 10px;
+  font-size: 25px;
+  background-color: transparent;
+  color: black;
+  font-weight: 100;
+  overflow: hidden;
+  z-index: 0;
 }
 main .resto-carte .resto-carte__icone:hover {
-  color: transparent;
-  -webkit-background-clip: text;
-  color: transparent;
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  position: absolute;
+  color: transparent;
+  transition: 500ms ease-in-out;
+  z-index: -1;
+  overflow: hidden;
 }
 
 .carte1 {
   width: auto;
+  cursor: pointer;
+  background-color: #F5F5F5;
 }
 .carte1-img {
   width: 100%;
@@ -227,16 +309,22 @@ main .resto-carte .resto-carte__icone:hover {
 }
 .carte1-background {
   background-color: #F5F5F5;
-  border-top-left-radius: 35px;
-  border-top-right-radius: 35px;
+  border-radius: 50px 50px 0 0;
   padding: 15px;
   position: relative;
-  top: -30px;
-  /*& p {
-      border-bottom: 2px solid $color-tertiaire;
-      width: 40px;
-      padding-bottom: 5px;
-  }*/
+  top: -45px;
+  margin-bottom: -45px;
+}
+@media screen and (min-width: 768px) {
+  .carte1-background {
+    top: -200px;
+    margin-bottom: -100px;
+  }
+}
+.carte1 h3 {
+  border-bottom: 2px solid #99E2D0;
+  width: 50px;
+  padding: 5px 0;
 }
 .carte1-header {
   display: flex;
@@ -245,6 +333,7 @@ main .resto-carte .resto-carte__icone:hover {
 }
 .carte1-header__icone {
   font-size: 25px;
+  padding: 25px;
 }
 .carte1-presentation {
   width: auto;
@@ -253,7 +342,6 @@ main .resto-carte .resto-carte__icone:hover {
   margin: auto;
   opacity: 0;
   transition: ease-in 2s;
-  transform: 2s;
 }
 .carte1-presentation:nth-child(3) {
   animation: slidedown 1s 0.5s forwards;
@@ -264,93 +352,85 @@ main .resto-carte .resto-carte__icone:hover {
 .carte1-presentation:nth-child(7) {
   animation: slidedown 1s 1.5s forwards;
 }
-@media screen and (min-width: 992px) {
-  .carte1-presentation {
-    flex-direction: initial;
-  }
-}
-@media screen and (min-width: 768px) {
-  .carte1-presentation {
-    margin-right: 120px;
-  }
-}
 .carte1-presentation__menu {
-  width: 100%;
+  width: auto;
   border-radius: 15px;
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.11);
   background-color: white;
   display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-  transition: width ease-in-out 500ms;
-  /*&:hover {
-      width:92% ;
-      border-radius: 15px 0 0 15px;
-  }*/
-}
-.carte1-presentation__menu__space {
-  display: flex;
   justify-content: space-between;
-  padding-bottom: 15px;
+  margin-bottom: 20px;
+  transition: ease-in-out 500ms;
+  overflow: hidden;
 }
-.carte1-presentation__menu__space p {
-  margin: -5px 10px;
+.carte1-presentation__menu__name {
+  display: flex;
+  flex-direction: column;
+  margin: -12px 10px;
+  overflow: hidden;
 }
-.carte1-presentation__menu h4 {
-  margin: 10px;
-}
-@media screen and (min-width: 992px) {
-  .carte1-presentation {
-    margin: 10px 20px;
-    /*transition: margin 1s ease-in-out;
-    &:hover {
-        margin: 50px 0;
-    }*/
-  }
-}
-.carte1-presentation__animation__check {
-  width: 20%;
-  background-color: #99E2D0;
-  color: white;
-  text-align: center;
-  padding: 22px;
-  position: absolute;
-  bottom: 20px;
-  right: 0px;
-  border-radius: 0 15px 15px 0;
-  /*&__rotate {
-      transition: transform 1s;
-      transform: rotate(360deg);
-  }*/
-}
-@media screen and (min-width: 768px) {
-  .carte1-presentation__animation__check {
-    width: auto;
-    right: -62px;
-  }
-}
-.carte1-presentation__survol p:nth-child(1) {
+.carte1-presentation__menu__name h4 {
+  margin-bottom: -9px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.carte1-presentation__animation__check {
-  transition: right 500ms ease-in-out;
-  display: none;
+.carte1-presentation__menu__name p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  filter: opacity(0.5);
 }
-
-@media screen and (min-width: 768px) {
-  .carte1-presentation__menu:hover .carte1-presentation__animation__check {
-    right: 0px;
-    display: initial;
+.carte1-presentation__menu__price {
+  display: flex;
+  align-items: flex-end;
+}
+.carte1-presentation__menu__price p {
+  padding: 10px;
+}
+@media screen and (min-width: 992px) {
+  .carte1-presentation {
+    margin: 10px 20px;
   }
 }
+.carte1-presentation__animation__check {
+  background-color: #99E2D0;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  border-radius: 0 15px 15px 0;
+  overflow: hidden;
+  margin-right: -66px;
+  transition: margin-right 500ms ease-in-out;
+}
+.carte1-presentation__animation__check__rotate {
+  transition: transform 500mss;
+}
+
+/*.carte1-presentation__animation__check{
+    transition: right 500ms ease-in-out;
+    display: none;
+}   */
+.carte1-presentation__menu:hover .carte1-presentation__animation__check {
+  margin-right: 0px;
+  /*@include version-tablette {
+      right: 0px;
+  }*/
+}
+
+.carte1-presentation__menu:hover .carte1-presentation__animation__check .carte1-presentation__animation__rotate {
+  animation: survol 1s;
+}
+
+/*.carte1-presentation__menu:hover .carte1-presentation__animation__check .carte1-presentation__animation__rotate {
+    transform: rotate(360deg);
+}*/
 .form {
   background-color: #F5F5F5;
 }
 .form__localisation {
   background-color: #DCDCDC;
+  opacity: 0.8;
   display: flex;
   justify-content: center;
   padding: 15px;
@@ -365,6 +445,9 @@ main .resto-carte .resto-carte__icone:hover {
   text-align: center;
   padding: 30px 30px 50px 30px;
 }
+.form__recherche h1 {
+  font-family: "Roboto";
+}
 @media screen and (min-width: 992px) {
   .form {
     background-color: transparent;
@@ -377,7 +460,7 @@ main .resto-carte .resto-carte__icone:hover {
   padding: 20px 0;
 }
 .footer-bloc__img {
-  width: 35%;
+  width: 33%;
   margin: 20px;
 }
 @media screen and (min-width: 992px) {
@@ -393,11 +476,11 @@ main .resto-carte .resto-carte__icone:hover {
 .footer-bloc__info {
   display: flex;
   align-items: center;
-  margin: -25px 20px;
+  margin: -15px 20px;
   color: white;
   text-decoration: none;
 }
-.footer-bloc__info h4 {
+.footer-bloc__info p {
   padding: 0 10px;
 }
 .footer-bloc__contact {

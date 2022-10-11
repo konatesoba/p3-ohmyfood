@@ -1,19 +1,32 @@
 main {
+        & h1 {
+            position: relative;
+            top: 35px;
+            margin: 0 20px;
+            font-family: $page-police;
+            font-size:$titre1-taille;
+        }
+        & p {
+            //filter: opacity(0.5);
+        }
         background-color: $color-arriere;
         & .resto {
             width: auto;
             display: flex;
             flex-wrap: wrap;
+            margin: auto;
+            padding: 40px 0;
         
             &-carte {
                 border-radius: 15px 15px 15px 15px;
                 background: white;
                 width: 90%;
-                margin: 20px 15px;
+                margin: 10px auto;
                 position:relative;
                 &__nouveau {
                     & p {
                         background-color: $color-tertiaire;
+                        color: $nouveau-dark;
                         width: 70px;
                         padding: 5px;
                         position: absolute;
@@ -24,9 +37,8 @@ main {
                 
                 @include version-tablette {
                     width: 45%;
-                }
-                @include version-desktop {
-                    width: 22%;
+                    margin: auto;
+                    margin-bottom: 25px;
                 }
                 &--img {
                     width: 100%;
@@ -35,9 +47,9 @@ main {
                     object-fit: cover;
                 }
                 &__footer{
-                    height: 50px;
+                    padding-bottom: 20px;
                     position: initial;
-                    overflow: hidden;
+                    //overflow: hidden;
                 }
                 &__description {
                     color: black;
@@ -51,23 +63,32 @@ main {
                 }
                 .resto-carte {
                     &__heart {
-                        color: gray;
-                        
-
                         
                     }
                     &__icone {
-                        transition: all 500ms ease-in-out;
                         position: absolute;
                         top:175px;
                         right: 10px;
+                        font-size: 25px;
+                        background-color: transparent;
+                        color: black;
+                        font-weight: 100;
+                        overflow: hidden;
+                        z-index: 0;
                         &:hover {
-                            color: transparent;
-                            -webkit-background-clip: text;
-                            color: transparent;
+                            //content:'';
                             background-image: linear-gradient(0deg,$color-primaire, $color-second);
+                            position: absolute;
+                            //top: 210px;
+                            color: transparent;
+                            transition: 500ms ease-in-out;
+                            z-index: -1;
+                            overflow: hidden;
+
+
                             
                             
+                             
                             
                         }
                     }
@@ -79,33 +100,43 @@ main {
         }
         .carte1{
             width: auto;
+            cursor: pointer;
+            background-color: $color-arriere-form;
             &-img {
                 width: 100%;
                 object-fit: cover;
             }
             &-background {
                 background-color: $color-arriere-form;
-                border-top-left-radius: 35px;
-                border-top-right-radius: 35px;
+                border-radius: 50px 50px 0 0;
                 padding: 15px;
                 position: relative;
-                top: -30px;
-                /*& p {
-                    border-bottom: 2px solid $color-tertiaire;
-                    width: 40px;
-                    padding-bottom: 5px;
-                }*/
+                top: -45px;
+                margin-bottom: -45px;
+                @include version-tablette {
+                    top:-200px;
+                    margin-bottom: -100px;
+                }
+                
+            }
+            & h3 {
+                border-bottom: 2px solid $color-tertiaire;
+                width: 50px;
+                padding: 5px 0;
             }
             
             &-header {
                 display: flex;
                 align-items: baseline;
                 justify-content: space-between;
+                
                 &__icone {
                     font-size: 25px;
+                    padding: 25px;
                 }
                 
             }
+
             &-presentation {
                 width: auto;
                 display: flex;
@@ -113,7 +144,6 @@ main {
                 margin: auto;
                 opacity: 0;
                 transition: ease-in 2s;
-                transform: 2s;
                 
                 &:nth-child(3) {
                     
@@ -128,49 +158,47 @@ main {
                     animation: slidedown 1s 1.5s forwards;
                 }
                 
-                
-                @include version-desktop {
-                    flex-direction: initial;
-
-                }
-                @include version-tablette {
-                    margin-right: 120px;
-                }
                 &__menu{
-                    width: 100%;
+                    width: auto;
                     border-radius: 15px;
                     box-shadow: 0 6px 12px 0 rgb(0 0 0 / 11%);
                     background-color: white;
                     display: flex;
-                    flex-direction: column;
+                    justify-content: space-between;
                     margin-bottom: 20px;
-                    transition: width ease-in-out 500ms;
-                    &:hover {
-                        width:92% ;
-                        border-radius: 15px 0 0 15px;
+                    transition: ease-in-out 500ms;
+                    overflow: hidden;
+                    &__name {
+                        display: flex;
+                        flex-direction: column;
+                        margin: -12px 10px;
+                        overflow: hidden;
+                        & h4 {
+                            margin-bottom: -9px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        & p {
+                            white-space: nowrap;//empeche le retour à la ligne 
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            filter: opacity(0.5);
+                            
+                        }  
                     }
                      
-                    &__space {
+                    &__price {
                         display: flex;
-                        justify-content: space-between;
-                        padding-bottom: 15px;
-
-                        & p {
-                            margin: -5px 10px;
-                            //font-size: 17px;
+                        align-items: flex-end;
+                        & p{
+                            padding: 10px;
                         }
-                    }
-                    & h4 {
-                        margin: 10px;
-                        //font-size: 20px;
+
                     }
                 }
                     @include version-desktop {
                         margin: 10px 20px;
-                        /*transition: margin 1s ease-in-out;
-                        &:hover {
-                            margin: 50px 0;
-                        }*/
                     }
                 
                 &__animation {
@@ -178,53 +206,44 @@ main {
                     
                     &__check {
 
-                            width: 20%;
                             background-color: $color-tertiaire;
                             color: white;
                             text-align: center;
-                            padding: 22px;
-                            position: absolute;
-                            bottom: 20px;
-                            right: -0px;
+                            padding: 25px;
                             border-radius: 0 15px 15px 0;
-                            @include version-tablette {
-                                width: auto;
-                                right: -62px;
-                                //display: none;
-                            }
-
-                                __rotate {
-                                    transition: transform 1s;
-                                    transform: rotate(360deg);
+                            overflow: hidden;
+                            margin-right: -66px;
+                            transition: margin-right 500ms ease-in-out;
+                                &__rotate {
+                                    transition: transform 500mss;
                                 }
 
                     }
                         
                 } 
-                   &__survol {
-                        & p:nth-child(1) {
-                            white-space: nowrap;//empeche le retour à la ligne 
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            
-                        }  
-                        
-                    }
-                        
-
-                
-                }
+                   
             } 
              
-        
-    .carte1-presentation__animation__check{
+    }   
+    /*.carte1-presentation__animation__check{
         transition: right 500ms ease-in-out;
         display: none;
-    }   
-    @include version-tablette {
+    }   */
+    
     .carte1-presentation__menu:hover .carte1-presentation__animation__check {
-        right: 0px;
-        display: initial;
+        margin-right: 0px;
+        /*@include version-tablette {
+            right: 0px;
+        }*/
+    }
+
+    .carte1-presentation__menu:hover .carte1-presentation__animation__check .carte1-presentation__animation__rotate{
+        animation: survol 1s;
+        
+        
         
     }
-    }
+    /*.carte1-presentation__menu:hover .carte1-presentation__animation__check .carte1-presentation__animation__rotate {
+        transform: rotate(360deg);
+    }*/
+    

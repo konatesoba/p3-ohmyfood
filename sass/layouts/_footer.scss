@@ -3,7 +3,7 @@
     background-color: hsl(0,0%,25%);
     padding: 20px 0;
     &__img {
-        width: 35%;
+        width: 33%;
         margin: 20px;
         @include version-desktop {
             width: 10%;
@@ -15,10 +15,10 @@
     &__info {
         display: flex;
         align-items: center;
-        margin: -25px 20px;
+        margin: -15px 20px;
         color: white;
         text-decoration: none;
-        & h4 {
+        & p {
             padding: 0 10px;
         }
     }

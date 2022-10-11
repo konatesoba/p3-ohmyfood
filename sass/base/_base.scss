@@ -1,3 +1,5 @@
+//@import url('https://fonts.googleapis.com/css2? family= Shrikhand & display=swap');
+//@import url('https://fonts.googleapis.com/css2? family= Roboto:wght@100 & display=swap');
 *,
 *::before,
 *::after {
@@ -5,11 +7,49 @@
 }
 body {
     width: auto; 
-    font-family: $page-police;
     margin: auto;
-    font-family:$page-police;
+    cursor: pointer;
+    z-index: 0;
+  //amiantion chargement de la page
+  & #global {
+    animation: afterload 5s;
+    z-index: 1;
+    height: 100%;
+
+  }
+  & #loader {
+
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top:50%;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid white;
+    border-radius: 50%;
+    border-top: 16px solid $color-primaire;
+    border-right: 16px solid $color-second;
+    border-left: 16px solid $color-second;
+    border-bottom: 16px solid $color-primaire;
+    animation: load linear infinite 1s;
+
+  }
+  
+  
+    
  }
- h1 {
-    font-family:$titre1-police;
-    font-size: $titre1-taille;
+ .carte1 h1 {
+   font-family: $titre1-police;
  }
+ 
+ h4 {
+   font-family: $page-police;
+ }
+ P {
+   font-family: $page-police;
+   font-size: $taille-police;
+ }
+
+ 
+

@@ -4,6 +4,7 @@
         background-color: $color-arriere-form;
         &__localisation {
             background-color: $color-champ;
+            opacity: 0.8;
             display: flex;
             justify-content: center;
             padding: 15px;
@@ -18,6 +19,9 @@
     
             text-align: center;
             padding: 30px 30px 50px 30px;
+            & h1{
+                font-family: $page-police;
+            }
         }
     @include version-desktop {
         background-color: transparent;

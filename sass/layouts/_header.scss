@@ -32,6 +32,14 @@
         &__img {
             width: 20%;
         }
+    }
+    &__return {
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        left: 10px;
+        color: black;
+        opacity: 80%;
     }    
 }
     

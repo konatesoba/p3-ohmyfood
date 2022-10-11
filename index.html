@@ -4,15 +4,18 @@
     <meta charset="utf-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> --> <!--défini la largeur de l'affichage qui varie selon l'écran et le niveau de zoom lorsque pour la 1ére fois-->
     <title>openclassesrooms-ohmygood</title>
-    <link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+    <!-- <link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css"> -->
     <link type="text/css" rel="stylesheet" href="public/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <!-- <link href="https : //fonts.googleapis.com/css2?family= famille= Roboto+Slab:wght@500 & display=swap" rel="stylesheet"> -->
     <script src="https://kit.fontawesome.com/cc41439a6b.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=320" /> <!-- largeur de la version portable-->
 </head>
 <body> 
+    <div id="global" >
+        <div id="loader" class="display"></div>
     <header>
         <div class="header-logo">
             <a href="index.html" class="header-logo__link">
@@ -27,13 +30,13 @@
                 <input class="form__localisation--champ" type="text" value="Paris, Belleville" />
             </div>
             <div class="form__recherche">
-                <h1>Réserver le menu qui vous convient</h1>
+                <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
                 <button class="form__recherche--bouton">Explorer nos restaurants</button>
             </div>
         </form>
     </section>
-        <section class="fonctionnement">
+    <section class="fonctionnement">
             <h1>Fonctionnement</h1>
             <div class="fonctionnement__etape">
                 <div class="fonctionnement__cercle"><p>1</p></div>
@@ -45,20 +48,19 @@
                 <div class="fonctionnement__icone "><i class="fa-solid fa-bars"></i></div>
                 <h4>Composez votre menu</h4>
             </div>
-            <div class="fonctionnement__etape fonctionnement__backcolor ">
+            <div class="fonctionnement__etape ">
                 <div class="fonctionnement__cercle"><p>3</p></div>
                 <div class="fonctionnement__icone fonctionnement__color"><i class="fa-solid fa-store"></i></div>
                 <h4>Dégustez au restaurant</h4>
             </div>
-        </div>
     </section>
     <main>
-        <h1>Restaurants </h1>
+            <h1>Restaurants </h1>
             <div class="resto">
                 <div class="resto-carte">
                     <div class="resto-carte__nouveau"><p>Nouveau</p></div>
                     <a href="la-palette-du-gout.html">
-                        <img class="resto-carte--img" src="/public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant la palette du goût"></img>
+                        <img class="resto-carte--img" src="/public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant la palette du goût" />
                         <div class="resto-carte__footer">
                             <div class="resto-carte__description">
                                 <h4>La palette du goût</h4>
@@ -72,23 +74,22 @@
                 </div>
                 <div class="resto-carte">
                     <div class="resto-carte__nouveau"><p>Nouveau</p></div>
-                        <a href="#">
-                            <img class="resto-carte--img" src="/public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant la note enchantée"></img>
-                            <div class="resto-carte__footer">
-                                <div class="resto-carte__description">
-                                    <h4>La note enchantée</h4>
-                                    <p>Charonne</p>
-                                </div>
+                    <a href="note-enchantees.html">
+                        <img class="resto-carte--img" src="/public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant la note enchantée" />
+                        <div class="resto-carte__footer">
+                            <div class="resto-carte__description">
+                                <h4>La note enchantée</h4>
+                                <p>Charonne</p>
+                            </div>
                             <div class="resto-carte__heart">
                                 <i class="resto-carte__icone fa-regular fa-heart"></i>
-                                <i class="fa light fa-hand-back-point-up"></i>
                             </div>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="resto-carte">
-                    <a href="#">
-                        <img class="resto-carte--img" src="/public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant à la française"></img>
+                    <a href="a-la-francaise.html">
+                        <img class="resto-carte--img" src="/public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant à la française" />
                         <div class="resto-carte__footer">
                             <div class="resto-carte__description">
                                 <h4>A la française</h4>
@@ -101,8 +102,8 @@
                     </a>
                 </div>
                 <div class="resto-carte">
-                    <a href="#">
-                        <img class="resto-carte--img" src="/public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant le delice des sens"></img>
+                    <a href="le-delice-des-sens.html">
+                        <img class="resto-carte--img" src="/public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant le delice des sens"/>
                         <div class="resto-carte__footer">
                             <div class="resto-carte__description">
                                 <h4>Le délice des sens</h4>
@@ -123,15 +124,16 @@
             </a>
             <a href="#" class="footer-bloc__info">
                 <i class="footer-bloc__icone fa-solid fa-utensils"></i>
-                <h4>Proposer un restaurant</h4>
+                <p>Proposer un restaurant</p>
             </a>
             <a href="#" class="footer-bloc__info">
                 <i class="footer-bloc__icone fa-sharp fa-solid fa-handshake-angle"></i>
-                <h4>Devenir partenaire</h4>
+                <p>Devenir partenaire</p>
             </a>
             <a href="" class="footer-bloc__contact"><p>Mentions légales</p></a>
             <a href="mailto:ohmyfood@food.fr" class="footer-bloc__contact"><p>Contact</p></a>
         </div>
     </footer>
+    </div>
 </body>
 </html>
