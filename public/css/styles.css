@@ -22,7 +22,17 @@
   }
   100% {
     transform: rotate(360deg);
-    display: none;
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes afterload {
@@ -36,38 +46,18 @@
     opacity: 1;
   }
 }
+@keyframes heart {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-body {
-  width: auto;
-  margin: auto;
-  cursor: pointer;
-  z-index: 0;
-}
-body #global {
-  animation: afterload 5s;
-  z-index: 1;
-  height: 100%;
-}
-body #loader {
-  position: fixed;
-  z-index: 2;
-  left: 50%;
-  top: 50%;
-  width: 120px;
-  height: 120px;
-  margin: -76px 0 0 -76px;
-  border: 16px solid white;
-  border-radius: 50%;
-  border-top: 16px solid #9356DC;
-  border-right: 16px solid #FF79DA;
-  border-left: 16px solid #FF79DA;
-  border-bottom: 16px solid #9356DC;
-  animation: load linear infinite 1s;
 }
 
 .carte1 h1 {
@@ -88,11 +78,11 @@ P {
   padding: 15px;
   border: none;
   color: white;
-  margin: 15px;
   cursor: pointer;
   transform: scale(1);
   transition: transform 400ms;
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  margin: 15px;
 }
 .form__recherche--bouton:hover {
   transform: scale(1.1);
@@ -101,15 +91,17 @@ P {
 }
 
 .carte1-button {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .carte1-button button {
-  width: 190px;
+  margin: 35px 55px;
+  width: 200px;
   border-radius: 30px;
   padding: 15px;
   border: none;
   color: white;
-  margin: 35px 55px;
   cursor: pointer;
   transform: scale(1);
   transition: transform 400ms;
@@ -220,6 +212,36 @@ a {
   color: #9356DC;
 }
 
+.global {
+  width: auto;
+  margin: auto;
+  cursor: pointer;
+  animation: afterload 3s;
+}
+.global-loader {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  background-color: white;
+  animation: loading 3s forwards;
+}
+.global-loader__rotate {
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid white;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-right: 16px solid #FF79DA;
+  border-left: 16px solid #FF79DA;
+  border-bottom: 16px solid #9356DC;
+  animation: load linear 3s forwards;
+}
+
 main {
   background-color: #F3F3F3;
 }
@@ -282,20 +304,26 @@ main .resto-carte .resto-carte__icone {
   position: absolute;
   top: 175px;
   right: 10px;
-  font-size: 25px;
-  background-color: transparent;
-  color: black;
-  font-weight: 100;
-  overflow: hidden;
+  font-size: 30px;
+  color: transparent;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
   z-index: 0;
 }
-main .resto-carte .resto-carte__icone:hover {
-  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+main .resto-carte .resto-carte__solid {
   position: absolute;
-  color: transparent;
-  transition: 500ms ease-in-out;
-  z-index: -1;
+  font-size: 30px;
   overflow: hidden;
+  background: white;
+  color: black;
+  top: 175px;
+  right: 10px;
+  z-index: 1;
+}
+main .resto-carte .resto-carte__solid:hover {
+  color: transparent;
+  animation: heart 3s forwards;
 }
 
 .carte1 {
@@ -318,7 +346,7 @@ main .resto-carte .resto-carte__icone:hover {
 @media screen and (min-width: 768px) {
   .carte1-background {
     top: -200px;
-    margin-bottom: -100px;
+    margin-bottom: -200px;
   }
 }
 .carte1 h3 {
@@ -332,8 +360,26 @@ main .resto-carte .resto-carte__icone:hover {
   justify-content: space-between;
 }
 .carte1-header__icone {
-  font-size: 25px;
-  padding: 25px;
+  position: absolute;
+  color: transparent;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  z-index: 0;
+  font-size: 40px;
+  right: 57px;
+  top: 40px;
+}
+.carte1-header__solid {
+  position: absolute;
+  overflow: hidden;
+  color: black;
+  z-index: 1;
+  background: #F5F5F5;
+}
+.carte1-header__solid:hover {
+  color: transparent;
+  animation: heart 3s forwards;
 }
 .carte1-presentation {
   width: auto;
@@ -429,8 +475,7 @@ main .resto-carte .resto-carte__icone:hover {
   background-color: #F5F5F5;
 }
 .form__localisation {
-  background-color: #DCDCDC;
-  opacity: 0.8;
+  background-color: gainsboro;
   display: flex;
   justify-content: center;
   padding: 15px;
@@ -439,7 +484,7 @@ main .resto-carte .resto-carte__icone:hover {
 .form__localisation--champ {
   border: none;
   text-align: center;
-  background-color: #DCDCDC;
+  background-color: gainsboro;
 }
 .form__recherche {
   text-align: center;
@@ -456,32 +501,24 @@ main .resto-carte .resto-carte__icone:hover {
 
 .footer-bloc {
   width: auto;
-  background-color: hsl(0deg, 0%, 25%);
+  background-color: #363636;
   padding: 20px 0;
 }
-.footer-bloc__img {
-  width: 33%;
+.footer-bloc h2 {
   margin: 20px;
-}
-@media screen and (min-width: 992px) {
-  .footer-bloc__img {
-    width: 10%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .footer-bloc__img {
-    width: 15%;
-  }
+  color: white;
+  font-family: "Shrikhand";
 }
 .footer-bloc__info {
   display: flex;
   align-items: center;
-  margin: -15px 20px;
+  margin: -22px 20px;
   color: white;
   text-decoration: none;
 }
-.footer-bloc__info p {
+.footer-bloc__info h4 {
   padding: 0 10px;
+  font-size: 14px;
 }
 .footer-bloc__contact {
   text-decoration: none;

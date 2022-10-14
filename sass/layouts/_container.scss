@@ -1,13 +1,42 @@
-main {
+.global {
+    width: auto; 
+    margin: auto;
+    cursor: pointer;
+    animation: afterload 3s;
+  //amiantion chargement de la page
+    &-loader {
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        background-color: white;
+        animation: loading 3s forwards;
+        &__rotate {
+            position: fixed;
+            z-index: 2;
+            left: 50%;
+            top:50%;
+            width: 120px;
+            height: 120px;
+            margin: -76px 0 0 -76px;
+            border: 16px solid white;
+            border-radius: 50%;
+            border-top: 16px solid $color-primaire;
+            border-right: 16px solid $color-second;
+            border-left: 16px solid $color-second;
+            border-bottom: 16px solid $color-primaire;
+            animation: load linear 3s forwards;
+        }
+
+    }
+}
+
+    main {
         & h1 {
             position: relative;
             top: 35px;
             margin: 0 20px;
             font-family: $page-police;
             font-size:$titre1-taille;
-        }
-        & p {
-            //filter: opacity(0.5);
         }
         background-color: $color-arriere;
         & .resto {
@@ -26,7 +55,7 @@ main {
                 &__nouveau {
                     & p {
                         background-color: $color-tertiaire;
-                        color: $nouveau-dark;
+                        color: darken($color-tertiaire, 50%);
                         width: 70px;
                         padding: 5px;
                         position: absolute;
@@ -62,40 +91,37 @@ main {
                     }
                 }
                 .resto-carte {
-                    &__heart {
-                        
-                    }
                     &__icone {
                         position: absolute;
                         top:175px;
                         right: 10px;
-                        font-size: 25px;
-                        background-color: transparent;
-                        color: black;
-                        font-weight: 100;
-                        overflow: hidden;
+                        font-size: 30px;
+                        color: transparent;
+                        background-image: linear-gradient(0deg,$color-primaire, $color-second);
+                        background-clip:text;
+                        -webkit-background-clip: text;
                         z-index: 0;
+                    }
+                    &__solid {
+                        position: absolute;
+                        font-size: 30px;
+                        overflow: hidden;
+                        background: white;
+                        color:black;
+                        top: 175px;
+                        right: 10px;
+                        z-index: 1;
                         &:hover {
-                            //content:'';
-                            background-image: linear-gradient(0deg,$color-primaire, $color-second);
-                            position: absolute;
-                            //top: 210px;
                             color: transparent;
-                            transition: 500ms ease-in-out;
-                            z-index: -1;
-                            overflow: hidden;
-
-
-                            
-                            
-                             
-                            
+                            //overflow: hidden;
+                            animation: heart 3s forwards;
                         }
+                        
                     }
                 }
             }
         }
-        
+       
         
         }
         .carte1{
@@ -115,7 +141,7 @@ main {
                 margin-bottom: -45px;
                 @include version-tablette {
                     top:-200px;
-                    margin-bottom: -100px;
+                    margin-bottom: -200px;
                 }
                 
             }
@@ -131,8 +157,18 @@ main {
                 justify-content: space-between;
                 
                 &__icone {
-                    font-size: 25px;
-                    padding: 25px;
+                    @include heartempty;  
+                    font-size: 40px; 
+                    right: 57px;
+                    top: 40px;
+                }
+                &__solid {
+                    @include heartfull;
+                    background: $color-arriere-form;
+
+                    &:hover {
+                        @include hearthover;
+                    }
                 }
                 
             }

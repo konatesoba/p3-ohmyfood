@@ -23,14 +23,26 @@
     @keyframes load {
         0% {
             transform: rotate(0);
-            
         }
         
         100% {
             transform: rotate(360deg);
-            display: none;
+            
             
         }
+        }
+
+    @keyframes loading {
+            0% {
+                opacity: 1;   
+            }
+            99% {
+                opacity: 1;
+            }
+            
+            100% {opacity: 0;
+                
+            }
         }
 
     @keyframes afterload {
@@ -43,6 +55,19 @@
         100% { 
             opacity:1; 
         }
-      }
+    }
+
+      @keyframes heart {
+        0% {
+            opacity: 1;
+            //transform: translatex(0);
+            }
+
+
+        100% {
+            opacity: 0;
+            //transform: translatex(-33px);
+            }
+    }
 
 

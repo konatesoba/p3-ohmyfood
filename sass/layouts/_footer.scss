@@ -1,25 +1,21 @@
 .footer-bloc {
     width: auto;
-    background-color: hsl(0,0%,25%);
+    background-color: darken($color-arriere-form, 75%);
     padding: 20px 0;
-    &__img {
-        width: 33%;
+    & h2 {
         margin: 20px;
-        @include version-desktop {
-            width: 10%;
-        }
-        @include version-tablette {
-            width: 15%;
-        }
+        color: white;
+        font-family: $titre1-police;
     }
     &__info {
         display: flex;
         align-items: center;
-        margin: -15px 20px;
+        margin: -22px 20px;
         color: white;
         text-decoration: none;
-        & p {
+        & h4 {
             padding: 0 10px;
+            font-size: $footer-size;
         }
     }
 

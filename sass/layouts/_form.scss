@@ -3,8 +3,8 @@
 .form {
         background-color: $color-arriere-form;
         &__localisation {
-            background-color: $color-champ;
-            opacity: 0.8;
+            background-color: darken($color-arriere-form, 10%);
+            //opacity: 0.8;
             display: flex;
             justify-content: center;
             padding: 15px;
@@ -12,7 +12,7 @@
             &--champ {
                 border: none;
                 text-align: center;
-                background-color: $color-champ;
+                background-color: darken($color-arriere-form, 10%);
                 }
         }
         &__recherche {
