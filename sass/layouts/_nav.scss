@@ -14,7 +14,7 @@ a {
     }
     &__etape{
         border-radius: 20px;
-        box-shadow: 0 6px 12px 0 rgb(0 0 0 / 11%);
+        @extend %shadowpage;
         background-color: $color-arriere;
         display: flex;
         align-items: center;
@@ -36,6 +36,7 @@ a {
                 border-radius: 50%;
                 width: 20px;
                 height: 20px;
+                
                 & p {
                     position: absolute;
                     bottom: -11px;
@@ -45,7 +46,7 @@ a {
         }
         &__icone {
             position: absolute;
-            left: 25px;
+            left: 20px;
             color: $color-icone;
             font-size: $size-icone;
         }

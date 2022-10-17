@@ -3,6 +3,7 @@
     margin: auto;
     cursor: pointer;
     animation: afterload 3s;
+    z-index: 0;
   //amiantion chargement de la page
     &-loader {
         position: absolute;
@@ -63,17 +64,25 @@
                     }
 
                 }
-                
                 @include version-tablette {
+                    width: 45%;
+                }
+                
+                @include version-desktop {
                     width: 45%;
                     margin: auto;
                     margin-bottom: 25px;
+                    height: 300px;
                 }
+
                 &--img {
-                    width: 100%;
+                    width: $allwidth;
                     border-radius: 15px 15px 0 0 ;
                     height: 160px;
                     object-fit: cover;
+                    @include version-desktop {
+                        height: 240px;
+                    }
                 }
                 &__footer{
                     padding-bottom: 20px;
@@ -88,33 +97,32 @@
                     }
                     & p{
                         margin:-5px 10px;
+                        @extend %textopacy;
+                        
                     }
                 }
                 .resto-carte {
                     &__icone {
-                        position: absolute;
-                        top:175px;
-                        right: 10px;
-                        font-size: 30px;
-                        color: transparent;
-                        background-image: linear-gradient(0deg,$color-primaire, $color-second);
-                        background-clip:text;
-                        -webkit-background-clip: text;
-                        z-index: 0;
+                        @include heartempty;
+                        @include heartsize;
+                        @include version-desktop {
+                            top: 250px;
+                        }
                     }
+                    
                     &__solid {
                         position: absolute;
-                        font-size: 30px;
+                        @include heartsize;
                         overflow: hidden;
                         background: white;
                         color:black;
-                        top: 175px;
-                        right: 10px;
-                        z-index: 1;
+                        z-index: 0;
                         &:hover {
                             color: transparent;
-                            //overflow: hidden;
                             animation: heart 3s forwards;
+                        }
+                        @include version-desktop {
+                            top:250px;
                         }
                         
                     }
@@ -123,13 +131,13 @@
         }
        
         
-        }
+    }
         .carte1{
             width: auto;
             cursor: pointer;
             background-color: $color-arriere-form;
             &-img {
-                width: 100%;
+                width: $allwidth;
                 object-fit: cover;
             }
             &-background {
@@ -158,8 +166,8 @@
                 
                 &__icone {
                     @include heartempty;  
-                    font-size: 40px; 
-                    right: 57px;
+                    font-size: 30px; 
+                    right: 30px;
                     top: 40px;
                 }
                 &__solid {
@@ -193,11 +201,11 @@
 
                     animation: slidedown 1s 1.5s forwards;
                 }
-                
+
                 &__menu{
                     width: auto;
                     border-radius: 15px;
-                    box-shadow: 0 6px 12px 0 rgb(0 0 0 / 11%);
+                    @extend %shadowpage;
                     background-color: white;
                     display: flex;
                     justify-content: space-between;
@@ -219,7 +227,7 @@
                             white-space: nowrap;//empeche le retour à la ligne 
                             overflow: hidden;
                             text-overflow: ellipsis;
-                            filter: opacity(0.5);
+                            @extend %textopacy;
                             
                         }  
                     }

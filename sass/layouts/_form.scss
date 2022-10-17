@@ -22,12 +22,11 @@
             & h1{
                 font-family: $page-police;
             }
+            p {
+                @extend %textopacy;
+            }
         }
-    @include version-desktop {
-        background-color: transparent;
-        
     }
-}
 
               
 

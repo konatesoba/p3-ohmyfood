@@ -13,6 +13,7 @@
 @mixin button {
     border-radius: 30px;
     padding:15px;
+    font-size: 15px;
     border: none;
     color: white;
     cursor: pointer;
@@ -40,9 +41,14 @@
         position: absolute;
         overflow: hidden;
         color:black;
-        z-index: 1;
 }
 @mixin hearthover {
             color: transparent;
             animation: heart 3s forwards;
         }  
+
+        @mixin heartsize {
+            font-size: 30px;
+            top:180px;
+            right: 13px;
+        }

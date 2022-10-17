@@ -20,8 +20,11 @@
   0% {
     transform: rotate(0);
   }
-  100% {
+  99% {
     transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
 @keyframes loading {
@@ -73,9 +76,18 @@ P {
   font-size: 14px;
 }
 
+.carte1-presentation__menu, .fonctionnement__etape {
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.11);
+}
+
+.form__recherche p, .carte1-presentation__menu__name p, main .resto-carte__description p {
+  filter: opacity(0.5);
+}
+
 .form__recherche--bouton {
   border-radius: 30px;
   padding: 15px;
+  font-size: 15px;
   border: none;
   color: white;
   cursor: pointer;
@@ -100,6 +112,7 @@ P {
   width: 200px;
   border-radius: 30px;
   padding: 15px;
+  font-size: 15px;
   border: none;
   color: white;
   cursor: pointer;
@@ -129,7 +142,6 @@ P {
 @media screen and (min-width: 768px) {
   .header-logo {
     width: auto;
-    border: 1px solid red;
   }
   .header-logo__img {
     width: 30%;
@@ -138,7 +150,6 @@ P {
 @media screen and (min-width: 992px) {
   .header-logo {
     width: auto;
-    border: 1px solid;
   }
   .header-logo__link {
     display: flex;
@@ -155,6 +166,10 @@ P {
   left: 10px;
   color: black;
   opacity: 80%;
+}
+.header-logo__return .fa-solid {
+  font-weight: bold;
+  font-size: 30px;
 }
 
 a {
@@ -174,7 +189,6 @@ a {
 }
 .fonctionnement__etape {
   border-radius: 20px;
-  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.11);
   background-color: #F3F3F3;
   display: flex;
   align-items: center;
@@ -203,7 +217,7 @@ a {
 }
 .fonctionnement__icone {
   position: absolute;
-  left: 25px;
+  left: 20px;
   color: gray;
   font-size: 13px;
 }
@@ -217,6 +231,7 @@ a {
   margin: auto;
   cursor: pointer;
   animation: afterload 3s;
+  z-index: 0;
 }
 .global-loader {
   position: absolute;
@@ -277,8 +292,14 @@ main .resto-carte__nouveau p {
 @media screen and (min-width: 768px) {
   main .resto-carte {
     width: 45%;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .resto-carte {
+    width: 45%;
     margin: auto;
     margin-bottom: 25px;
+    height: 300px;
   }
 }
 main .resto-carte--img {
@@ -286,6 +307,11 @@ main .resto-carte--img {
   border-radius: 15px 15px 0 0;
   height: 160px;
   object-fit: cover;
+}
+@media screen and (min-width: 992px) {
+  main .resto-carte--img {
+    height: 240px;
+  }
 }
 main .resto-carte__footer {
   padding-bottom: 20px;
@@ -302,28 +328,38 @@ main .resto-carte__description p {
 }
 main .resto-carte .resto-carte__icone {
   position: absolute;
-  top: 175px;
-  right: 10px;
-  font-size: 30px;
   color: transparent;
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   z-index: 0;
+  font-size: 30px;
+  top: 180px;
+  right: 13px;
+}
+@media screen and (min-width: 992px) {
+  main .resto-carte .resto-carte__icone {
+    top: 250px;
+  }
 }
 main .resto-carte .resto-carte__solid {
   position: absolute;
   font-size: 30px;
+  top: 180px;
+  right: 13px;
   overflow: hidden;
   background: white;
   color: black;
-  top: 175px;
-  right: 10px;
-  z-index: 1;
+  z-index: 0;
 }
 main .resto-carte .resto-carte__solid:hover {
   color: transparent;
   animation: heart 3s forwards;
+}
+@media screen and (min-width: 992px) {
+  main .resto-carte .resto-carte__solid {
+    top: 250px;
+  }
 }
 
 .carte1 {
@@ -366,15 +402,14 @@ main .resto-carte .resto-carte__solid:hover {
   background-clip: text;
   -webkit-background-clip: text;
   z-index: 0;
-  font-size: 40px;
-  right: 57px;
+  font-size: 30px;
+  right: 30px;
   top: 40px;
 }
 .carte1-header__solid {
   position: absolute;
   overflow: hidden;
   color: black;
-  z-index: 1;
   background: #F5F5F5;
 }
 .carte1-header__solid:hover {
@@ -401,7 +436,6 @@ main .resto-carte .resto-carte__solid:hover {
 .carte1-presentation__menu {
   width: auto;
   border-radius: 15px;
-  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.11);
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -425,7 +459,6 @@ main .resto-carte .resto-carte__solid:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  filter: opacity(0.5);
 }
 .carte1-presentation__menu__price {
   display: flex;
@@ -493,12 +526,6 @@ main .resto-carte .resto-carte__solid:hover {
 .form__recherche h1 {
   font-family: "Roboto";
 }
-@media screen and (min-width: 992px) {
-  .form {
-    background-color: transparent;
-  }
-}
-
 .footer-bloc {
   width: auto;
   background-color: #363636;

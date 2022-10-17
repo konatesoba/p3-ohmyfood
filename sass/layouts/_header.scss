@@ -14,7 +14,6 @@
 
     @include version-tablette {
         width: auto;
-        border: 1px solid red;
         &__img{
             width: 30%;
         }
@@ -24,7 +23,6 @@
 
     @include version-desktop {
         width: auto;
-        border: 1px solid;
         &__link{
             display: flex;
             justify-content: center;
@@ -40,6 +38,10 @@
         left: 10px;
         color: black;
         opacity: 80%;
+        & .fa-solid {
+            font-weight: bold;
+            font-size: 30px;
+        }
     }    
 }
     
