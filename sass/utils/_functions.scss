@@ -27,10 +27,15 @@
         
         99% {
             transform: rotate(360deg);
+            width: 120px;
+            height: 120px;
+            margin: -76px 0 0 -76px;
         }
         100% {
             transform: rotate(0);
-
+            width: 0;
+            height: 0;
+            margin-left: -800px;
         }
         }
 
@@ -44,7 +49,8 @@
             
             100% {
                 opacity: 0;
-                //transform:translateX(-35px); 
+                //transform:translateX(50px);
+                
             }
         }
 
