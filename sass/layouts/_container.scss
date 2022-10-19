@@ -32,6 +32,7 @@
 }
 
     main {
+        background-color: $color-arriere;
         & h1 {
             position: relative;
             top: 35px;
@@ -39,20 +40,28 @@
             font-family: $page-police;
             font-size:$titre1-taille;
         }
-        background-color: $color-arriere;
         & .resto {
             width: auto;
             display: flex;
+            //flex-direction: column;
             flex-wrap: wrap;
-            margin: auto;
+            //margin: auto;
             padding: 40px 0;
+            position: relative;
+            @include version-tablette{
+                display: flex;
+                justify-content: center;
+                
+            }
+            
         
             &-carte {
-                border-radius: 15px 15px 15px 15px;
+                border-radius: 15px;
                 background: white;
                 width: 90%;
                 margin: 10px auto;
                 position:relative;
+                overflow: hidden;
                 &__nouveau {
                     & p {
                         background-color: $color-tertiaire;
@@ -64,15 +73,18 @@
                     }
 
                 }
-                @include version-tablette {
-                    width: 45%;
-                }
+                /*@include version-tablette {
+                    width: 480px;
+                    height: auto;
+                }*/
                 
-                @include version-desktop {
-                    width: 45%;
-                    margin: auto;
+                @include version-tablette {
+
                     margin-bottom: 25px;
-                    height: 300px;
+                    //height: 300px;
+                    height: auto;
+                    max-width: 45%;
+                    margin: 1rem;
                 }
 
                 &--img {
@@ -80,8 +92,13 @@
                     border-radius: 15px 15px 0 0 ;
                     height: 160px;
                     object-fit: cover;
-                    @include version-desktop {
+                    /*@include version-desktop {
                         height: 240px;
+                    }*/
+                    @include version-tablette{
+                        height: 15em;
+                        max-width: 100%;
+                        max-height: 100%;
                     }
                 }
                 &__footer{
@@ -105,8 +122,8 @@
                     &__icone {
                         @include heartempty;
                         @include heartsize;
-                        @include version-desktop {
-                            top: 250px;
+                        @include version-tablette {
+                            top: 255px;
                         }
                     }
                     
@@ -121,8 +138,8 @@
                             color: transparent;
                             animation: heart 3s forwards;
                         }
-                        @include version-desktop {
-                            top:250px;
+                        @include version-tablette {
+                            top:255px;
                         }
                         
                     }
