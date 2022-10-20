@@ -204,13 +204,21 @@ a {
   background-color: #F3F3F3;
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-bottom: 20px;
   position: initial;
   overflow: hidden;
 }
 .fonctionnement__etape:hover {
   background-color: rgba(238, 130, 238, 0.1725490196);
+}
+.fonctionnement__etape h4 {
+  margin-left: 45px;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement__etape h4 {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .fonctionnement__cercle {
   position: absolute;

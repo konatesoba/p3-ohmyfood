@@ -2,17 +2,20 @@
     width: auto;
     background-color: darken($color-arriere-form, 75%);
     padding: 20px 0;
+
     & h2 {
         margin: 20px;
         color: white;
         font-family: $titre1-police;
     }
+
     &__info {
         display: flex;
         align-items: center;
         margin: -22px 20px;
         color: white;
         text-decoration: none;
+
         & h4 {
             padding: 0 10px;
             font-size: $footer-size;
@@ -22,10 +25,11 @@
     &__contact {
         text-decoration: none;
         color: white;
+
         & p {
             padding: 0 20px;
         }
-    } 
-    
-    
+    }
+
+
 }

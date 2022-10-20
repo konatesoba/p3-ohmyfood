@@ -1,20 +1,22 @@
-
 .header-logo {
     width: 100%;
     box-shadow: $page-shadow-size #fff;
     padding: 18px;
     font-size: 20px;
-    &__link{
+
+    &__link {
         display: flex;
         justify-content: center;
     }
-    &__img{
+
+    &__img {
         width: 50%;
     }
 
     @include version-tablette {
         width: auto;
-        &__img{
+
+        &__img {
             width: 30%;
         }
 
@@ -23,14 +25,17 @@
 
     @include version-desktop {
         width: auto;
-        &__link{
+
+        &__link {
             display: flex;
             justify-content: center;
         }
+
         &__img {
             width: 20%;
         }
     }
+
     &__return {
         border: none;
         background-color: transparent;
@@ -38,10 +43,10 @@
         left: 10px;
         color: black;
         opacity: 80%;
+
         & .fa-solid {
             font-weight: bold;
             font-size: 30px;
         }
-    }    
+    }
 }
-    

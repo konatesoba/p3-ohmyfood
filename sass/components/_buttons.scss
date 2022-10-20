@@ -1,20 +1,23 @@
 .form__recherche--bouton {
     @include button;
     margin: 15px;
+
     &:hover {
         @include buttonhover;
     }
 }
 
-    
+
 .carte1-button {
     display: flex;
     align-items: center;
     justify-content: center;
+
     & button {
         margin: 35px 55px;
         width: 200px;
         @include button;
+
         &:hover {
             @include buttonhover;
         }

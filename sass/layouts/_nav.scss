@@ -1,6 +1,7 @@
 a {
     text-decoration: none;
 }
+
 .fonctionnement {
 
     width: auto;
@@ -9,58 +10,71 @@ a {
     display: flex;
     flex-direction: column;
     position: relative;
+
     @include version-tablette {
         width: 50%;
         margin: auto;
     }
+
     & h1 {
         font-family: $page-police;
     }
-    &__etape{
+
+    &__etape {
         border-radius: 20px;
         @extend %shadowpage;
         background-color: $color-arriere;
         display: flex;
         align-items: center;
-        justify-content: center;
         margin-bottom: 20px;
         position: initial;
         overflow: hidden;
+
         &:hover {
             background-color: #EE82EE2C;
         }
-    }
-        
-        &__cercle {
-                position: absolute;
-                left: -10px;
-                color: white;
-                font-size: $size-icone;
-                background-color: $color-primaire;
-                border-radius: 50%;
-                width: 20px;
-                height: 20px;
-                
-                & p {
-                    position: absolute;
-                    bottom: -11px;
-                    right: 7px;
-                }
-            
+
+        & h4 {
+            margin-left: 45px;
+
+            @include version-tablette {
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
-        &__icone {
+    }
+
+    &__cercle {
+        position: absolute;
+        left: -10px;
+        color: white;
+        font-size: $size-icone;
+        background-color: $color-primaire;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+
+        & p {
             position: absolute;
-            left: 20px;
-            color: $color-icone;
-            font-size: $size-icone;
+            bottom: -11px;
+            right: 7px;
         }
 
-        
-        
     }
+
+    &__icone {
+        position: absolute;
+        left: 20px;
+        color: $color-icone;
+        font-size: $size-icone;
+    }
+
+
+
+}
+
 .fonctionnement__etape:hover .fonctionnement__icone {
 
     color: $color-primaire;
 
 }
-

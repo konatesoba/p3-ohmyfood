@@ -12,7 +12,7 @@
 
 @mixin button {
     border-radius: 30px;
-    padding:15px;
+    padding: 15px;
     font-size: 15px;
     border: none;
     color: white;
@@ -29,26 +29,28 @@
 }
 
 
-@mixin heartempty{
+@mixin heartempty {
     position: absolute;
     color: transparent;
-    background-image: linear-gradient(0deg,$color-primaire, $color-second);
-    background-clip:text;
+    background-image: linear-gradient(0deg, $color-primaire, $color-second);
+    background-clip: text;
     -webkit-background-clip: text;
     z-index: 0;
 }
-@mixin heartfull{
-        position: absolute;
-        overflow: hidden;
-        color:black;
-}
-@mixin hearthover {
-            color: transparent;
-            animation: heart 3s forwards;
-        }  
 
-        @mixin heartsize {
-            font-size: 30px;
-            top:180px;
-            right: 13px;
-        }
+@mixin heartfull {
+    position: absolute;
+    overflow: hidden;
+    color: black;
+}
+
+@mixin hearthover {
+    color: transparent;
+    animation: heart 3s forwards;
+}
+
+@mixin heartsize {
+    font-size: 30px;
+    top: 180px;
+    right: 13px;
+}

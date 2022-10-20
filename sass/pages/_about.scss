@@ -1,0 +1,162 @@
+.carte1 {
+    width: auto;
+    cursor: pointer;
+    background-color: $color-arriere-form;
+
+    &-img {
+        width: $allwidth;
+        object-fit: cover;
+    }
+
+    &-background {
+        background-color: $color-arriere-form;
+        border-radius: 50px 50px 0 0;
+        padding: 15px;
+        position: relative;
+        top: -45px;
+        margin-bottom: -45px;
+
+        @include version-tablette {
+            top: -200px;
+            margin-bottom: -200px;
+        }
+
+    }
+
+    & h3 {
+        border-bottom: 2px solid $color-tertiaire;
+        width: 50px;
+        padding: 5px 0;
+    }
+
+    &-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+        &__icone {
+            @include heartempty;
+            font-size: 30px;
+            right: 30px;
+            top: 40px;
+        }
+
+        &__solid {
+            @include heartfull;
+            background: $color-arriere-form;
+
+            &:hover {
+                @include hearthover;
+            }
+        }
+
+    }
+
+    &-presentation {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        opacity: 0;
+        transition: ease-in 2s;
+
+        &:nth-child(3) {
+
+            animation: slidedown 1s 0.5s forwards;
+        }
+
+        &:nth-child(5) {
+
+            animation: slidedown 1s 1s forwards;
+        }
+
+        &:nth-child(7) {
+
+            animation: slidedown 1s 1.5s forwards;
+        }
+
+        &__menu {
+            width: auto;
+            border-radius: 15px;
+            @extend %shadowpage;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            transition: ease-in-out 500ms;
+            overflow: hidden;
+
+            &__name {
+                display: flex;
+                flex-direction: column;
+                margin: -12px 10px;
+                overflow: hidden;
+
+                & h4 {
+                    margin-bottom: -9px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                & p {
+                    white-space: nowrap; //empeche le retour à la ligne 
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    @extend %textopacy;
+
+                }
+            }
+
+            &__price {
+                display: flex;
+                align-items: flex-end;
+
+                & p {
+                    padding: 10px;
+                }
+
+            }
+        }
+
+        @include version-desktop {
+            margin: 10px 20px;
+        }
+
+        &__animation {
+
+
+            &__check {
+
+                background-color: $color-tertiaire;
+                color: white;
+                text-align: center;
+                padding: 25px;
+                border-radius: 0 15px 15px 0;
+                overflow: hidden;
+                margin-right: -66px;
+                transition: margin-right 500ms ease-in-out;
+
+                &__rotate {
+                    transition: transform 500mss;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.carte1-presentation__menu:hover .carte1-presentation__animation__check {
+    margin-right: 0px;
+
+}
+
+.carte1-presentation__menu:hover .carte1-presentation__animation__check .carte1-presentation__animation__rotate {
+    animation: survol 1s;
+
+
+
+}

@@ -1,174 +1,183 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> --> <!--défini la largeur de l'affichage qui varie selon l'écran et le niveau de zoom lorsque pour la 1ére fois-->
-        <title>openclassesrooms-ohmygood</title>
-        <!--<link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">-->
-        <link type="text/css" rel="stylesheet" href="public/css/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet"> 
-        <!-- <link href="https : //fonts.googleapis.com/css2?family= famille= Roboto+Slab:wght@500 & display=swap" rel="stylesheet"> -->
-        <script src="https://kit.fontawesome.com/cc41439a6b.js" crossorigin="anonymous"></script>
-        <meta name="viewport" content="width=320"> <!-- largeur de la version portable-->
-    </head>
-    <body>
-        <div id="global" >
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!--défini la largeur de l'affichage qui varie selon l'écran et le niveau de zoom lorsque pour la 1ére fois-->
+    <title>openclassesrooms-ohmygood</title>
+    <!--<link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">-->
+    <link type="text/css" rel="stylesheet" href="public/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <!-- <link href="https : //fonts.googleapis.com/css2?family= famille= Roboto+Slab:wght@500 & display=swap" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/cc41439a6b.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=320"> <!-- largeur de la version portable-->
+</head>
+
+<body>
+    <div id="global">
         <div id="loader" class="display"></div>
+    </div>
+    <header>
+        <div class="header-logo">
+            <a href="index.html" class="header-logo__link">
+                <div class="header-logo__return"><i class="fa-solid fa-arrow-left"></i></div>
+                <img src="./public/img/logo/ohmyfood.png" alt="logo-ohmygood" class="header-logo__img">
+            </a>
         </div>
-        <header>
-            <div class="header-logo">
-                <a href="index.html" class="header-logo__link">
-                    <div class="header-logo__return"><i class="fa-solid fa-arrow-left"></i></div>
-                    <img src="./public/img/logo/ohmyfood.png" alt="logo-ohmygood" class="header-logo__img">
-                </a>
+    </header>
+    <section class="carte1">
+        <img class="carte1-img" src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            alt="restaurant la palette du goût">
+        <div class="carte1-background">
+            <div class="carte1-header">
+                <h1>A la française</h1>
+                <i class="carte1-header__icone fas fa-heart"></i>
+                <i class="carte1-header__icone carte1-header__solid far fa-heart"></i>
             </div>
-        </header>
-        <section class="carte1">
-            <img class="carte1-img" src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant la palette du goût">
-            <div class="carte1-background">
-                <div class="carte1-header">
-                    <h1>A la française</h1>
-                    <i class="carte1-header__icone fas fa-heart"></i>
-                    <i class="carte1-header__icone carte1-header__solid far fa-heart"></i>
-                </div>
-                <h3>ENTRÉES</h3>
-                <div class="carte1-presentation">
-                    <div class="carte1-presentation__menu ">
-                        <div class="carte1-presentation__menu__name">
-                            <h4>Tartare de poulpe acidulé</h4>
-                            <p>Aux zestes d'orange</p>
-                        </div>
-                        <div class="carte1-presentation__menu__price">
-                            <p>25€</p>
-                            <div class="carte1-presentation__animation__check ">
+            <h3>ENTRÉES</h3>
+            <div class="carte1-presentation">
+                <div class="carte1-presentation__menu ">
+                    <div class="carte1-presentation__menu__name">
+                        <h4>Tartare de poulpe acidulé</h4>
+                        <p>Aux zestes d'orange</p>
+                    </div>
+                    <div class="carte1-presentation__menu__price">
+                        <p>25€</p>
+                        <div class="carte1-presentation__animation__check ">
                             <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carte1-presentation__menu">
-                        <div class="carte1-presentation__menu__name">
-                            <h4>Velouté de légumes d'antan</h4>
-                            <p>Carotte, panais, topinambour</p>
-                        </div>
-                        <div class="carte1-presentation__menu__price">
-                            <p>35€</p>
-                            <div class="carte1-presentation__animation__check ">
-                                <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carte1-presentation__menu">
-                        <div class="carte1-presentation__menu__name">
-                            <h4>Soupe à l'oignon</h4>
-                            <p>Revisitée</p>
-                        </div>
-                        <div class="carte1-presentation__menu__price">
-                            <p>20€</p>
-                            <div class="carte1-presentation__animation__check">
-                                <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <h3>PLATS</h3>
-                <div class="carte1-presentation">
-                    <div class="carte1-presentation__menu">
-                        <div class="carte1-presentation__menu__name">
-                            <h4>Coquilles Saint-Jacques</h4>
-                            <p>Accompagnées d'une purée de panais</p>
-                        </div>
-                        <div class="carte1-presentation__menu__price">
-                            <p>40€</p>
-                            <div class="carte1-presentation__animation__check">
-                                <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
-                            </div>
-                        </div>
+                <div class="carte1-presentation__menu">
+                    <div class="carte1-presentation__menu__name">
+                        <h4>Velouté de légumes d'antan</h4>
+                        <p>Carotte, panais, topinambour</p>
                     </div>
-                    <div class="carte1-presentation__menu">
-                        <div class="carte1-presentation__menu__name">
-                            <h4>Magret de canard</h4>
-                            <p>Et parmentier de pommes de terre</p>
-                        </div>
-                        <div class="carte1-presentation__menu__price">
-                            <p>35€</p>
-                            <div class="carte1-presentation__animation__check">
-                                <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carte1-presentation__menu">
-                        <div class="carte1-presentation__menu__name">
-                            <h4>Pigeonneau d’Ille-et-Vilaine</h4>
-                            <p>Sur son lit de gnocchis aux légumes</p>
-                        </div>
-                        <div class="carte1-presentation__menu__price">
-                            <p>44€</p>
-                            <div class="carte1-presentation__animation__check">
-                                <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
-                            </div>
+                    <div class="carte1-presentation__menu__price">
+                        <p>35€</p>
+                        <div class="carte1-presentation__animation__check ">
+                            <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
                         </div>
                     </div>
                 </div>
-                <h3>DESSERT</h3>
-                <div class="carte1-presentation">
-                    <div class="carte1-presentation__menu">
-                        <div class="carte1-presentation__menu__name">
-                            <h4>Pétales de violettes glacés</h4>
-                            <p>Et purée de noisettes</p>
-                        </div>
-                        <div class="carte1-presentation__menu__price">
-                            <p>18€</p>
-                            <div class="carte1-presentation__animation__check">
-                                <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
-                            </div>
-                        </div>
+                <div class="carte1-presentation__menu">
+                    <div class="carte1-presentation__menu__name">
+                        <h4>Soupe à l'oignon</h4>
+                        <p>Revisitée</p>
                     </div>
-                    <div class="carte1-presentation__menu">
-                        <div class="carte1-presentation__menu__name">
-                            <h4>Fondant au chocolat</h4>
-                            <p>Revisité</p>
-                        </div>
-                        <div class="carte1-presentation__menu__price">
-                            <p>22€</p>
-                            <div class="carte1-presentation__animation__check">
-                                <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carte1-presentation__menu">
-                        <div class="carte1-presentation__menu__name">
-                            <h4>Millefeuille croustillant</h4>
-                            <p>AMyrtilles et pâte d’amande</p>
-                        </div>
-                        <div class="carte1-presentation__menu__price">
-                            <p>23€</p>
-                            <div class="carte1-presentation__animation__check">
-                                <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
-                            </div>
+                    <div class="carte1-presentation__menu__price">
+                        <p>20€</p>
+                        <div class="carte1-presentation__animation__check">
+                            <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
                         </div>
                     </div>
                 </div>
-                <div class="carte1-button"><button>Commander</button></div>
-            </div>  
-        </section>
-    <footer>
-            <div class="footer-bloc">
-                <a href="index.html" class="footer-bloc__link">
-                    <h2>ohmyfood</h2>
-                </a>
-                <a href="#" class="footer-bloc__info">
-                    <i class="footer-bloc__icone fa-solid fa-utensils"></i>
-                    <h4>Proposer un restaurant</h4>
-                </a>
-                <a href="#" class="footer-bloc__info">
-                    <i class="footer-bloc__icone fa-sharp fa-solid fa-handshake-angle"></i>
-                    <h4>Devenir partenaire</h4>
-                </a>
-                <a href="" class="footer-bloc__contact"><p>Mentions légales</p></a>
-                <a href="mailto:ohmyfood@food.fr" class="footer-bloc__contact"><p>Contact</p></a>
             </div>
+            <h3>PLATS</h3>
+            <div class="carte1-presentation">
+                <div class="carte1-presentation__menu">
+                    <div class="carte1-presentation__menu__name">
+                        <h4>Coquilles Saint-Jacques</h4>
+                        <p>Accompagnées d'une purée de panais</p>
+                    </div>
+                    <div class="carte1-presentation__menu__price">
+                        <p>40€</p>
+                        <div class="carte1-presentation__animation__check">
+                            <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="carte1-presentation__menu">
+                    <div class="carte1-presentation__menu__name">
+                        <h4>Magret de canard</h4>
+                        <p>Et parmentier de pommes de terre</p>
+                    </div>
+                    <div class="carte1-presentation__menu__price">
+                        <p>35€</p>
+                        <div class="carte1-presentation__animation__check">
+                            <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="carte1-presentation__menu">
+                    <div class="carte1-presentation__menu__name">
+                        <h4>Pigeonneau d’Ille-et-Vilaine</h4>
+                        <p>Sur son lit de gnocchis aux légumes</p>
+                    </div>
+                    <div class="carte1-presentation__menu__price">
+                        <p>44€</p>
+                        <div class="carte1-presentation__animation__check">
+                            <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>DESSERT</h3>
+            <div class="carte1-presentation">
+                <div class="carte1-presentation__menu">
+                    <div class="carte1-presentation__menu__name">
+                        <h4>Pétales de violettes glacés</h4>
+                        <p>Et purée de noisettes</p>
+                    </div>
+                    <div class="carte1-presentation__menu__price">
+                        <p>18€</p>
+                        <div class="carte1-presentation__animation__check">
+                            <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="carte1-presentation__menu">
+                    <div class="carte1-presentation__menu__name">
+                        <h4>Fondant au chocolat</h4>
+                        <p>Revisité</p>
+                    </div>
+                    <div class="carte1-presentation__menu__price">
+                        <p>22€</p>
+                        <div class="carte1-presentation__animation__check">
+                            <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="carte1-presentation__menu">
+                    <div class="carte1-presentation__menu__name">
+                        <h4>Millefeuille croustillant</h4>
+                        <p>AMyrtilles et pâte d’amande</p>
+                    </div>
+                    <div class="carte1-presentation__menu__price">
+                        <p>23€</p>
+                        <div class="carte1-presentation__animation__check">
+                            <i class="carte1-presentation__animation__rotate fa-sharp fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carte1-button"><button>Commander</button></div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-bloc">
+            <a href="index.html" class="footer-bloc__link">
+                <h2>ohmyfood</h2>
+            </a>
+            <a href="#" class="footer-bloc__info">
+                <i class="footer-bloc__icone fa-solid fa-utensils"></i>
+                <h4>Proposer un restaurant</h4>
+            </a>
+            <a href="#" class="footer-bloc__info">
+                <i class="footer-bloc__icone fa-sharp fa-solid fa-handshake-angle"></i>
+                <h4>Devenir partenaire</h4>
+            </a>
+            <a href="" class="footer-bloc__contact">
+                <p>Mentions légales</p>
+            </a>
+            <a href="mailto:ohmyfood@food.fr" class="footer-bloc__contact">
+                <p>Contact</p>
+            </a>
+        </div>
     </footer>
-    </body>
+</body>
+
 </html>
