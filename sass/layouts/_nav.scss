@@ -25,6 +25,7 @@ a {
         @extend %shadowpage;
         background-color: $color-arriere;
         display: flex;
+        justify-content: center;
         align-items: center;
         margin-bottom: 20px;
         position: initial;
@@ -37,10 +38,6 @@ a {
         & h4 {
             margin-left: 33px;
 
-            @include version-tablette {
-                margin-left: auto;
-                margin-right: auto;
-            }
         }
     }
 

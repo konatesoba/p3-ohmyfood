@@ -225,6 +225,7 @@ a {
   border-radius: 20px;
   background-color: #F3F3F3;
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 20px;
   position: initial;
@@ -235,12 +236,6 @@ a {
 }
 .fonctionnement__etape h4 {
   margin-left: 33px;
-}
-@media screen and (min-width: 768px) {
-  .fonctionnement__etape h4 {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 .fonctionnement__cercle {
   position: absolute;
