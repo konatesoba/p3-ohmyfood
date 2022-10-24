@@ -444,11 +444,6 @@ main .resto-carte__description p {
 .carte1-header__heart {
   border: none;
   background-color: transparent;
-  width: 42px;
-  padding: 18px;
-  position: absolute;
-  top: 35px;
-  right: 22px;
 }
 .carte1-header__icone {
   position: absolute;
