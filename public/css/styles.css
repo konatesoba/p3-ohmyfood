@@ -1,7 +1,7 @@
 @keyframes slidedown {
   from {
     opacity: 0;
-    transform: translatey(10px);
+    transform: translatey(5px);
   }
   to {
     opacity: 1;
@@ -201,7 +201,7 @@ P {
   transition: 1s ease-in-out;
   background-clip: text;
   -webkit-background-clip: text;
-  z-index: 0;
+  z-index: 1;
   font-size: 30px;
   top: 180px;
   right: 13px;
@@ -444,6 +444,11 @@ main .resto-carte__description p {
 .carte1-header__heart {
   border: none;
   background-color: transparent;
+  width: 42px;
+  padding: 18px;
+  position: absolute;
+  top: 35px;
+  right: 22px;
 }
 .carte1-header__icone {
   position: absolute;
@@ -463,7 +468,7 @@ main .resto-carte__description p {
   transition: 1s ease-in-out;
   background-clip: text;
   -webkit-background-clip: text;
-  z-index: 0;
+  z-index: 1;
   background: #F5F5F5;
   right: 10px;
   top: 40px;
