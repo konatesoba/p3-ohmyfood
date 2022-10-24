@@ -18,9 +18,6 @@
 .resto-carte__icone {
     @include heartempty;
     @include heartsize;
-    @include version-tablette {
-        top: 255px;
-    }
 }
 
 .resto-carte__solid {
@@ -31,10 +28,6 @@
     &:hover {
         color: transparent;
         animation: heart 3s forwards;
-    }
-
-    @include version-tablette {
-        top: 255px;
     }
 
 }
