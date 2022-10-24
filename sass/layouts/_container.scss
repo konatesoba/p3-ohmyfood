@@ -98,8 +98,11 @@ main {
             }
 
             &__footer {
-                padding-bottom: 20px;
+            
                 position: initial;
+                @include version-tablette {
+                    padding-bottom: 20px;
+                }
             }
 
             &__description {

@@ -388,8 +388,12 @@ main .resto-carte--img {
   }
 }
 main .resto-carte__footer {
-  padding-bottom: 20px;
   position: initial;
+}
+@media screen and (min-width: 768px) {
+  main .resto-carte__footer {
+    padding-bottom: 20px;
+  }
 }
 main .resto-carte__description {
   color: black;
