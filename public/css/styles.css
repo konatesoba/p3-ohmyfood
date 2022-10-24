@@ -459,6 +459,8 @@ main .resto-carte__description p {
   color: black;
   transition: 1s ease-in-out;
   background: #F5F5F5;
+  right: 10px;
+  top: 40px;
 }
 .carte1-header__solid:hover {
   color: transparent;

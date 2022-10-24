@@ -50,6 +50,8 @@
         &__solid {
             @include heartfull;
             background: $color-arriere-form;
+            right: 10px;
+            top: 40px;
 
             &:hover {
                 @include hearthover;
