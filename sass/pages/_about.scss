@@ -41,9 +41,11 @@
         &__icone {
             @include heartempty;
             font-size: 30px;
-            right: 30px;
+            right: 10px;
             top: 40px;
+            
         }
+
 
         &__solid {
             @include heartfull;

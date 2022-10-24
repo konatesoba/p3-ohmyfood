@@ -450,7 +450,7 @@ main .resto-carte__description p {
   -webkit-background-clip: text;
   z-index: 0;
   font-size: 30px;
-  right: 30px;
+  right: 10px;
   top: 40px;
 }
 .carte1-header__solid {
