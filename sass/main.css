@@ -1,3 +1,13 @@
+@-webkit-keyframes slidedown {
+  from {
+    opacity: 0;
+    transform: translatey(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes slidedown {
   from {
     opacity: 0;
@@ -8,12 +18,37 @@
     transform: translateY(0);
   }
 }
+@-webkit-keyframes survol {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes survol {
   from {
     transform: rotate(0);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes load {
+  0% {
+    transform: rotate(0);
+  }
+  99% {
+    transform: rotate(360deg);
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+  }
+  100% {
+    transform: rotate(0);
+    width: 0;
+    height: 0;
+    margin-left: -800px;
   }
 }
 @keyframes load {
@@ -33,6 +68,17 @@
     margin-left: -800px;
   }
 }
+@-webkit-keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes loading {
   0% {
     opacity: 1;
@@ -44,6 +90,17 @@
     opacity: 0;
   }
 }
+@-webkit-keyframes afterload {
+  0% {
+    opacity: 0.3;
+  }
+  99% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes afterload {
   0% {
     opacity: 0.3;
@@ -53,6 +110,14 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@-webkit-keyframes heart {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes heart {
@@ -149,13 +214,7 @@ P {
 .form__localisation--champ {
   border: none;
   text-align: center;
-  margin: 0 5px;
   background-color: gainsboro;
-}
-.form__localisation--champ:focus {
-  outline: none;
-  border: 2px solid #767676;
-  border-radius: 15px;
 }
 .form__recherche {
   text-align: center;
@@ -205,6 +264,8 @@ P {
   overflow: hidden;
   color: black;
   transition: 1s ease-in-out;
+  background-clip: text;
+  -webkit-background-clip: text;
   z-index: 1;
   font-size: 30px;
   top: 180px;
@@ -214,7 +275,8 @@ P {
 }
 .resto-carte__solid:hover {
   color: transparent;
-  animation: heart 3s forwards;
+  -webkit-animation: heart 3s forwards;
+          animation: heart 3s forwards;
 }
 
 .carte1-button {
@@ -308,7 +370,8 @@ a {
   width: auto;
   margin: auto;
   cursor: pointer;
-  animation: afterload 3s;
+  -webkit-animation: afterload 3s;
+          animation: afterload 3s;
   z-index: 0;
 }
 .global-loader {
@@ -316,7 +379,8 @@ a {
   z-index: 1;
   height: 100%;
   background-color: white;
-  animation: loading 3s forwards;
+  -webkit-animation: loading 3s forwards;
+          animation: loading 3s forwards;
 }
 .global-loader__rotate {
   position: fixed;
@@ -332,7 +396,8 @@ a {
   border-right: 16px solid #FF79DA;
   border-left: 16px solid #FF79DA;
   border-bottom: 16px solid #9356DC;
-  animation: load linear 3s forwards;
+  -webkit-animation: load linear 3s forwards;
+          animation: load linear 3s forwards;
 }
 
 main {
@@ -386,7 +451,8 @@ main .resto-carte--img {
   width: 100%;
   border-radius: 15px 15px 0 0;
   height: 160px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   main .resto-carte--img {
@@ -419,7 +485,8 @@ main .resto-carte__description p {
 }
 .carte1-img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .carte1-background {
   background-color: #F5F5F5;
@@ -460,29 +527,22 @@ main .resto-carte__description p {
   right: 10px;
   top: 40px;
 }
-@media screen and (min-width: 768px) {
-  .carte1-header__icone {
-    right: 25px;
-  }
-}
 .carte1-header__solid {
   position: absolute;
   overflow: hidden;
   color: black;
   transition: 1s ease-in-out;
+  background-clip: text;
+  -webkit-background-clip: text;
   z-index: 1;
   background: #F5F5F5;
   right: 10px;
   top: 40px;
 }
-@media screen and (min-width: 768px) {
-  .carte1-header__solid {
-    right: 25px;
-  }
-}
 .carte1-header__solid:hover {
   color: transparent;
-  animation: heart 3s forwards;
+  -webkit-animation: heart 3s forwards;
+          animation: heart 3s forwards;
 }
 .carte1-presentation {
   width: auto;
@@ -493,13 +553,16 @@ main .resto-carte__description p {
   transition: ease-in 2s;
 }
 .carte1-presentation:nth-child(3) {
-  animation: slidedown 1s 0.5s forwards;
+  -webkit-animation: slidedown 1s 0.5s forwards;
+          animation: slidedown 1s 0.5s forwards;
 }
 .carte1-presentation:nth-child(5) {
-  animation: slidedown 1s 1s forwards;
+  -webkit-animation: slidedown 1s 1s forwards;
+          animation: slidedown 1s 1s forwards;
 }
 .carte1-presentation:nth-child(7) {
-  animation: slidedown 1s 1.5s forwards;
+  -webkit-animation: slidedown 1s 1.5s forwards;
+          animation: slidedown 1s 1.5s forwards;
 }
 .carte1-presentation__menu {
   width: auto;
@@ -559,7 +622,8 @@ main .resto-carte__description p {
 }
 
 .carte1-presentation__menu:hover .carte1-presentation__animation__check .carte1-presentation__animation__rotate {
-  animation: survol 1s;
+  -webkit-animation: survol 1s;
+          animation: survol 1s;
 }
 
 .footer-bloc {
@@ -589,6 +653,4 @@ main .resto-carte__description p {
 }
 .footer-bloc__contact p {
   padding: 0 20px;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=main.css.map */

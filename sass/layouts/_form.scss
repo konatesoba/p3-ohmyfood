@@ -12,7 +12,13 @@
             &--champ {
                 border: none;
                 text-align: center;
+                margin: 0 5px;
                 background-color: darken($color-arriere-form, 10%);
+                &:focus {
+                    outline: none ;
+                    border: 2px solid darken($color-arriere-form, 50%);
+                    border-radius: 15px;
+                }
                 }
         }
         &__recherche {
