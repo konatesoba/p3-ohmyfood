@@ -117,35 +117,6 @@ main {
                 }
             }
 
-            .resto-carte {
-                &__icone {
-                    @include heartempty;
-                    @include heartsize;
-
-                    @include version-tablette {
-                        top: 255px;
-                    }
-                }
-
-                &__solid {
-                    position: absolute;
-                    @include heartsize;
-                    overflow: hidden;
-                    background: white;
-                    color: black;
-                    z-index: 0;
-
-                    &:hover {
-                        color: transparent;
-                        animation: heart 3s forwards;
-                    }
-
-                    @include version-tablette {
-                        top: 255px;
-                    }
-
-                }
-            }
         }
     }
 

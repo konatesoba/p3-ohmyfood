@@ -29,10 +29,14 @@
         padding: 5px 0;
     }
 
-    &-header {
+   &-header {
         display: flex;
         align-items: baseline;
         justify-content: space-between;
+        &__heart {
+            border: none;
+            background-color: transparent;
+        }
 
         &__icone {
             @include heartempty;

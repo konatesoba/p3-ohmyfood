@@ -8,6 +8,38 @@
 }
 
 
+.resto-carte__heart {
+    border: none;
+    background-color: transparent;
+    margin-left: -80px;
+}
+
+
+.resto-carte__icone {
+    @include heartempty;
+    @include heartsize;
+    @include version-tablette {
+        top: 255px;
+    }
+}
+
+.resto-carte__solid {
+    @include heartfull;
+    @include heartsize;
+    background: white;
+    z-index: 0;
+    &:hover {
+        color: transparent;
+        animation: heart 3s forwards;
+    }
+
+    @include version-tablette {
+        top: 255px;
+    }
+
+}
+
+
 .carte1-button {
     display: flex;
     align-items: center;

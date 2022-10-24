@@ -3,10 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <!--défini la largeur de l'affichage qui varie selon l'écran et le niveau de zoom lorsque pour la 1ére fois-->
     <title>openclassesrooms-ohmygood</title>
-    <!--<link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">-->
     <link type="text/css" rel="stylesheet" href="public/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +16,7 @@
     <header>
         <div class="header-logo">
             <a href="index.html" class="header-logo__link">
-                <div class="header-logo__return"><i class="fa-solid fa-arrow-left"></i></div>
+                <button class="header-logo__return"><i class="fa-solid fa-arrow-left"></i></button>
                 <img src="./public/img/logo/ohmyfood.png" alt="logo-ohmygood" class="header-logo__img">
             </a>
         </div>
@@ -30,8 +27,10 @@
         <div class="carte1-background">
             <div class="carte1-header">
                 <h1>La palette du goût</h1>
-                <i class="carte1-header__icone fas fa-heart"></i>
-                <i class="carte1-header__icone carte1-header__solid far fa-heart"></i>
+                <button class="carte1-header__heart">
+                    <i class="carte1-header__icone fas fa-heart"></i>
+                    <i class="carte1-header__icone carte1-header__solid far fa-heart"></i>
+                </button>
             </div>
             <h3>ENTRÉES</h3>
             <div class="carte1-presentation">

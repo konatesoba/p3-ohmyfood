@@ -3,23 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <!--défini la largeur de l'affichage qui varie selon l'écran et le niveau de zoom lorsque pour la 1ére fois-->
     <title>openclassesrooms-ohmygood</title>
-    <!--<link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">-->
     <link type="text/css" rel="stylesheet" href="public/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
-    <!-- <link href="https : //fonts.googleapis.com/css2?family= famille= Roboto+Slab:wght@500 & display=swap" rel="stylesheet"> -->
     <script src="https://kit.fontawesome.com/cc41439a6b.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=320"> <!-- largeur de la version portable-->
 </head>
 
 <body>
-    <div id="global">
-        <div id="loader" class="display"></div>
-    </div>
     <header>
         <div class="header-logo">
             <a href="index.html" class="header-logo__link">
@@ -34,8 +27,10 @@
         <div class="carte1-background">
             <div class="carte1-header">
                 <h1>A la française</h1>
-                <i class="carte1-header__icone fas fa-heart"></i>
-                <i class="carte1-header__icone carte1-header__solid far fa-heart"></i>
+                <button class="carte1-header__heart">
+                    <i class="carte1-header__icone fas fa-heart"></i>
+                    <i class="carte1-header__icone carte1-header__solid far fa-heart"></i>
+                </button>
             </div>
             <h3>ENTRÉES</h3>
             <div class="carte1-presentation">
